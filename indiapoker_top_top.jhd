@@ -1,0 +1,9 @@
+MODULE indiapoker_top_top
+	SUBMODULE indianpoker_top
+		INSTANCE XLXI_1
+	SUBMODULE mux2_design
+		INSTANCE XLXI_2
+	SUBMODULE subtract1_design
+		INSTANCE XLXI_4
+	SUBMODULE subtract1_design
+		INSTANCE XLXI_5

@@ -1,0 +1,534 @@
+////////////////////////////////////////////////////////////////////////////////
+// Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+////////////////////////////////////////////////////////////////////////////////
+//   ____  ____ 
+//  /   /\/   / 
+// /___/  \  /    Vendor: Xilinx 
+// \   \   \/     Version : 14.7
+//  \   \         Application : sch2hdl
+//  /   /         Filename : bcd_design.vf
+// /___/   /\     Timestamp : 01/25/2021 21:18:14
+// \   \  /  \ 
+//  \___\/\___\ 
+//
+//Command: sch2hdl -intstyle ise -family spartan3 -verilog C:/Users/limhb/ISE/project_2_test/bcd_design.vf -w C:/Users/limhb/ISE/project_2_test/bcd_design.sch
+//Design Name: bcd_design
+//Device: spartan3
+//Purpose:
+//    This verilog netlist is translated from an ECS schematic.It can be 
+//    synthesized and simulated, but it should not be modified. 
+//
+`timescale 1ns / 1ps
+
+module M2_1_MXILINX_bcd_design(D0, 
+                               D1, 
+                               S0, 
+                               O);
+
+    input D0;
+    input D1;
+    input S0;
+   output O;
+   
+   wire M0;
+   wire M1;
+   
+   AND2B1  I_36_7 (.I0(S0), 
+                  .I1(D0), 
+                  .O(M0));
+   OR2  I_36_8 (.I0(M1), 
+               .I1(M0), 
+               .O(O));
+   AND2  I_36_9 (.I0(D1), 
+                .I1(S0), 
+                .O(M1));
+endmodule
+`timescale 1ns / 1ps
+
+module COMPM4_MXILINX_bcd_design(A0, 
+                                 A1, 
+                                 A2, 
+                                 A3, 
+                                 B0, 
+                                 B1, 
+                                 B2, 
+                                 B3, 
+                                 GT, 
+                                 LT);
+
+    input A0;
+    input A1;
+    input A2;
+    input A3;
+    input B0;
+    input B1;
+    input B2;
+    input B3;
+   output GT;
+   output LT;
+   
+   wire EQ_1;
+   wire EQ_3;
+   wire EQ2_3;
+   wire GE0_1;
+   wire GE2_3;
+   wire GTA;
+   wire GTB;
+   wire GT_1;
+   wire GT_3;
+   wire GT0_1;
+   wire LE0_1;
+   wire LE2_3;
+   wire LTA;
+   wire LTB;
+   wire LT_1;
+   wire LT_3;
+   wire LT0_1;
+   
+   AND2  I_36_1 (.I0(GT0_1), 
+                .I1(EQ2_3), 
+                .O(GTA));
+   AND2  I_36_2 (.I0(EQ2_3), 
+                .I1(LT0_1), 
+                .O(LTA));
+   NOR2  I_36_3 (.I0(GTB), 
+                .I1(LTB), 
+                .O(EQ2_3));
+   AND2B1  I_36_4 (.I0(A3), 
+                  .I1(B3), 
+                  .O(LT_3));
+   OR2  I_36_5 (.I0(LT_1), 
+               .I1(LE0_1), 
+               .O(LT0_1));
+   AND2B1  I_36_6 (.I0(B3), 
+                  .I1(A3), 
+                  .O(GT_3));
+   AND2B1  I_36_7 (.I0(A1), 
+                  .I1(B1), 
+                  .O(LT_1));
+   XNOR2  I_36_8 (.I0(A3), 
+                 .I1(B3), 
+                 .O(EQ_3));
+   AND2B1  I_36_9 (.I0(B1), 
+                  .I1(A1), 
+                  .O(GT_1));
+   OR2  I_36_11 (.I0(LTB), 
+                .I1(LTA), 
+                .O(LT));
+   OR2  I_36_12 (.I0(GTB), 
+                .I1(GTA), 
+                .O(GT));
+   XNOR2  I_36_13 (.I0(A1), 
+                  .I1(B1), 
+                  .O(EQ_1));
+   AND3B1  I_36_14 (.I0(B2), 
+                   .I1(EQ_3), 
+                   .I2(A2), 
+                   .O(GE2_3));
+   AND3B1  I_36_15 (.I0(A2), 
+                   .I1(EQ_3), 
+                   .I2(B2), 
+                   .O(LE2_3));
+   AND3B1  I_36_16 (.I0(B0), 
+                   .I1(EQ_1), 
+                   .I2(A0), 
+                   .O(GE0_1));
+   AND3B1  I_36_17 (.I0(A0), 
+                   .I1(EQ_1), 
+                   .I2(B0), 
+                   .O(LE0_1));
+   OR2  I_36_18 (.I0(GT_1), 
+                .I1(GE0_1), 
+                .O(GT0_1));
+   OR2  I_36_19 (.I0(GT_3), 
+                .I1(GE2_3), 
+                .O(GTB));
+   OR2  I_36_20 (.I0(LT_3), 
+                .I1(LE2_3), 
+                .O(LTB));
+endmodule
+`timescale 1ns / 1ps
+
+module ADD4_MXILINX_bcd_design(A0, 
+                               A1, 
+                               A2, 
+                               A3, 
+                               B0, 
+                               B1, 
+                               B2, 
+                               B3, 
+                               CI, 
+                               CO, 
+                               OFL, 
+                               S0, 
+                               S1, 
+                               S2, 
+                               S3);
+
+    input A0;
+    input A1;
+    input A2;
+    input A3;
+    input B0;
+    input B1;
+    input B2;
+    input B3;
+    input CI;
+   output CO;
+   output OFL;
+   output S0;
+   output S1;
+   output S2;
+   output S3;
+   
+   wire C0;
+   wire C1;
+   wire C2;
+   wire C2O;
+   wire dummy;
+   wire I0;
+   wire I1;
+   wire I2;
+   wire I3;
+   wire CO_DUMMY;
+   
+   assign CO = CO_DUMMY;
+   (* RLOC = "X0Y0" *) 
+   MUXCY_L  I_36_55 (.CI(C0), 
+                    .DI(A1), 
+                    .S(I1), 
+                    .LO(C1));
+   (* RLOC = "X0Y1" *) 
+   MUXCY  I_36_58 (.CI(C2), 
+                  .DI(A3), 
+                  .S(I3), 
+                  .O(CO_DUMMY));
+   (* RLOC = "X0Y1" *) 
+   MUXCY_D  I_36_62 (.CI(C1), 
+                    .DI(A2), 
+                    .S(I2), 
+                    .LO(C2), 
+                    .O(C2O));
+   XORCY  I_36_73 (.CI(CI), 
+                  .LI(I0), 
+                  .O(S0));
+   XORCY  I_36_74 (.CI(C0), 
+                  .LI(I1), 
+                  .O(S1));
+   XORCY  I_36_75 (.CI(C2), 
+                  .LI(I3), 
+                  .O(S3));
+   XORCY  I_36_76 (.CI(C1), 
+                  .LI(I2), 
+                  .O(S2));
+   (* RLOC = "X0Y0" *) 
+   MUXCY_L  I_36_111 (.CI(CI), 
+                     .DI(A0), 
+                     .S(I0), 
+                     .LO(C0));
+   (* RLOC = "X0Y0" *) 
+   FMAP  I_36_175 (.I1(A1), 
+                  .I2(B1), 
+                  .I3(dummy), 
+                  .I4(dummy), 
+                  .O(I1));
+   (* RLOC = "X0Y0" *) 
+   FMAP  I_36_178 (.I1(A0), 
+                  .I2(B0), 
+                  .I3(dummy), 
+                  .I4(dummy), 
+                  .O(I0));
+   (* RLOC = "X0Y1" *) 
+   FMAP  I_36_182 (.I1(A2), 
+                  .I2(B2), 
+                  .I3(dummy), 
+                  .I4(dummy), 
+                  .O(I2));
+   (* RLOC = "X0Y1" *) 
+   FMAP  I_36_206 (.I1(A3), 
+                  .I2(B3), 
+                  .I3(dummy), 
+                  .I4(dummy), 
+                  .O(I3));
+   XOR2  I_36_239 (.I0(A0), 
+                  .I1(B0), 
+                  .O(I0));
+   XOR2  I_36_240 (.I0(A1), 
+                  .I1(B1), 
+                  .O(I1));
+   XOR2  I_36_241 (.I0(A2), 
+                  .I1(B2), 
+                  .O(I2));
+   XOR2  I_36_242 (.I0(A3), 
+                  .I1(B3), 
+                  .O(I3));
+   XOR2  I_36_259 (.I0(C2O), 
+                  .I1(CO_DUMMY), 
+                  .O(OFL));
+endmodule
+`timescale 1ns / 1ps
+
+module bcd_design(a0, 
+                  a1, 
+                  a2, 
+                  a3, 
+                  a4, 
+                  a5, 
+                  a6, 
+                  a7, 
+                  b0, 
+                  b1, 
+                  b2, 
+                  b3, 
+                  b4, 
+                  b5, 
+                  b6, 
+                  b7);
+
+    input a0;
+    input a1;
+    input a2;
+    input a3;
+    input a4;
+    input a5;
+    input a6;
+    input a7;
+   output b0;
+   output b1;
+   output b2;
+   output b3;
+   output b4;
+   output b5;
+   output b6;
+   output b7;
+   
+   wire XLXN_1;
+   wire XLXN_13;
+   wire XLXN_14;
+   wire XLXN_15;
+   wire XLXN_16;
+   wire XLXN_23;
+   wire XLXN_30;
+   wire XLXN_31;
+   wire XLXN_32;
+   wire XLXN_33;
+   wire XLXN_44;
+   wire XLXN_45;
+   wire XLXN_46;
+   wire XLXN_47;
+   wire XLXN_94;
+   wire XLXN_96;
+   wire XLXN_119;
+   wire XLXN_139;
+   wire XLXN_140;
+   wire XLXN_141;
+   wire XLXN_142;
+   wire XLXN_143;
+   wire XLXN_144;
+   wire XLXN_145;
+   wire XLXN_146;
+   wire XLXN_147;
+   wire XLXN_148;
+   wire XLXN_149;
+   wire XLXN_150;
+   wire XLXN_151;
+   wire XLXN_155;
+   wire XLXN_156;
+   wire XLXN_157;
+   wire XLXN_158;
+   wire XLXN_159;
+   wire XLXN_160;
+   wire XLXN_161;
+   wire XLXN_162;
+   wire XLXN_163;
+   wire XLXN_164;
+   wire XLXN_165;
+   wire XLXN_166;
+   wire XLXN_167;
+   wire XLXN_168;
+   wire XLXN_170;
+   wire XLXN_403;
+   wire XLXN_404;
+   wire XLXN_406;
+   wire XLXN_408;
+   wire XLXN_409;
+   wire XLXN_410;
+   
+   (* HU_SET = "XLXI_4_0" *) 
+   ADD4_MXILINX_bcd_design  XLXI_4 (.A0(XLXN_31), 
+                                   .A1(XLXN_30), 
+                                   .A2(XLXN_33), 
+                                   .A3(XLXN_32), 
+                                   .B0(a3), 
+                                   .B1(a4), 
+                                   .B2(a5), 
+                                   .B3(XLXN_94), 
+                                   .CI(XLXN_1), 
+                                   .CO(), 
+                                   .OFL(), 
+                                   .S0(XLXN_47), 
+                                   .S1(XLXN_46), 
+                                   .S2(XLXN_45), 
+                                   .S3(XLXN_44));
+   (* HU_SET = "XLXI_10_1" *) 
+   COMPM4_MXILINX_bcd_design  XLXI_10 (.A0(a3), 
+                                      .A1(a4), 
+                                      .A2(a5), 
+                                      .A3(XLXN_96), 
+                                      .B0(XLXN_13), 
+                                      .B1(XLXN_15), 
+                                      .B2(XLXN_16), 
+                                      .B3(XLXN_14), 
+                                      .GT(XLXN_23), 
+                                      .LT());
+   GND  XLXI_11 (.G(XLXN_1));
+   GND  XLXI_12 (.G(XLXN_13));
+   GND  XLXI_13 (.G(XLXN_14));
+   GND  XLXI_14 (.G(XLXN_15));
+   VCC  XLXI_15 (.P(XLXN_16));
+   (* HU_SET = "XLXI_25_4" *) 
+   M2_1_MXILINX_bcd_design  XLXI_25 (.D0(XLXN_119), 
+                                    .D1(XLXN_44), 
+                                    .S0(XLXN_23), 
+                                    .O(b6));
+   (* HU_SET = "XLXI_26_2" *) 
+   M2_1_MXILINX_bcd_design  XLXI_26 (.D0(a5), 
+                                    .D1(XLXN_45), 
+                                    .S0(XLXN_23), 
+                                    .O(XLXN_403));
+   (* HU_SET = "XLXI_27_3" *) 
+   M2_1_MXILINX_bcd_design  XLXI_27 (.D0(a4), 
+                                    .D1(XLXN_46), 
+                                    .S0(XLXN_23), 
+                                    .O(XLXN_404));
+   (* HU_SET = "XLXI_28_5" *) 
+   M2_1_MXILINX_bcd_design  XLXI_28 (.D0(a3), 
+                                    .D1(XLXN_47), 
+                                    .S0(XLXN_23), 
+                                    .O(XLXN_406));
+   VCC  XLXI_37 (.P(XLXN_30));
+   VCC  XLXI_38 (.P(XLXN_31));
+   GND  XLXI_39 (.G(XLXN_32));
+   GND  XLXI_40 (.G(XLXN_33));
+   GND  XLXI_103 (.G(XLXN_94));
+   GND  XLXI_104 (.G(XLXN_96));
+   GND  XLXI_122 (.G(XLXN_119));
+   (* HU_SET = "XLXI_143_7" *) 
+   ADD4_MXILINX_bcd_design  XLXI_143 (.A0(XLXN_142), 
+                                     .A1(XLXN_141), 
+                                     .A2(XLXN_144), 
+                                     .A3(XLXN_143), 
+                                     .B0(a2), 
+                                     .B1(XLXN_406), 
+                                     .B2(XLXN_404), 
+                                     .B3(XLXN_403), 
+                                     .CI(XLXN_140), 
+                                     .CO(), 
+                                     .OFL(), 
+                                     .S0(XLXN_147), 
+                                     .S1(XLXN_146), 
+                                     .S2(XLXN_145), 
+                                     .S3(XLXN_155));
+   GND  XLXI_144 (.G(XLXN_140));
+   VCC  XLXI_145 (.P(XLXN_141));
+   VCC  XLXI_146 (.P(XLXN_142));
+   GND  XLXI_147 (.G(XLXN_143));
+   GND  XLXI_148 (.G(XLXN_144));
+   (* HU_SET = "XLXI_149_6" *) 
+   COMPM4_MXILINX_bcd_design  XLXI_149 (.A0(a2), 
+                                       .A1(XLXN_406), 
+                                       .A2(XLXN_404), 
+                                       .A3(XLXN_403), 
+                                       .B0(XLXN_148), 
+                                       .B1(XLXN_150), 
+                                       .B2(XLXN_151), 
+                                       .B3(XLXN_149), 
+                                       .GT(XLXN_139), 
+                                       .LT());
+   GND  XLXI_150 (.G(XLXN_148));
+   GND  XLXI_151 (.G(XLXN_149));
+   GND  XLXI_152 (.G(XLXN_150));
+   VCC  XLXI_153 (.P(XLXN_151));
+   (* HU_SET = "XLXI_156_8" *) 
+   M2_1_MXILINX_bcd_design  XLXI_156 (.D0(XLXN_404), 
+                                     .D1(XLXN_145), 
+                                     .S0(XLXN_139), 
+                                     .O(XLXN_408));
+   (* HU_SET = "XLXI_157_9" *) 
+   M2_1_MXILINX_bcd_design  XLXI_157 (.D0(XLXN_406), 
+                                     .D1(XLXN_146), 
+                                     .S0(XLXN_139), 
+                                     .O(XLXN_409));
+   (* HU_SET = "XLXI_158_10" *) 
+   M2_1_MXILINX_bcd_design  XLXI_158 (.D0(XLXN_403), 
+                                     .D1(XLXN_155), 
+                                     .S0(XLXN_139), 
+                                     .O(b5));
+   (* HU_SET = "XLXI_159_11" *) 
+   M2_1_MXILINX_bcd_design  XLXI_159 (.D0(a2), 
+                                     .D1(XLXN_147), 
+                                     .S0(XLXN_139), 
+                                     .O(XLXN_410));
+   (* HU_SET = "XLXI_161_12" *) 
+   ADD4_MXILINX_bcd_design  XLXI_161 (.A0(XLXN_159), 
+                                     .A1(XLXN_158), 
+                                     .A2(XLXN_161), 
+                                     .A3(XLXN_160), 
+                                     .B0(a1), 
+                                     .B1(XLXN_410), 
+                                     .B2(XLXN_409), 
+                                     .B3(XLXN_408), 
+                                     .CI(XLXN_157), 
+                                     .CO(), 
+                                     .OFL(), 
+                                     .S0(XLXN_164), 
+                                     .S1(XLXN_163), 
+                                     .S2(XLXN_162), 
+                                     .S3(XLXN_170));
+   GND  XLXI_162 (.G(XLXN_157));
+   VCC  XLXI_163 (.P(XLXN_158));
+   VCC  XLXI_164 (.P(XLXN_159));
+   GND  XLXI_165 (.G(XLXN_160));
+   GND  XLXI_166 (.G(XLXN_161));
+   (* HU_SET = "XLXI_167_13" *) 
+   COMPM4_MXILINX_bcd_design  XLXI_167 (.A0(a1), 
+                                       .A1(XLXN_410), 
+                                       .A2(XLXN_409), 
+                                       .A3(XLXN_408), 
+                                       .B0(XLXN_165), 
+                                       .B1(XLXN_167), 
+                                       .B2(XLXN_168), 
+                                       .B3(XLXN_166), 
+                                       .GT(XLXN_156), 
+                                       .LT());
+   GND  XLXI_168 (.G(XLXN_165));
+   GND  XLXI_169 (.G(XLXN_166));
+   GND  XLXI_170 (.G(XLXN_167));
+   VCC  XLXI_171 (.P(XLXN_168));
+   (* HU_SET = "XLXI_172_14" *) 
+   M2_1_MXILINX_bcd_design  XLXI_172 (.D0(XLXN_409), 
+                                     .D1(XLXN_162), 
+                                     .S0(XLXN_156), 
+                                     .O(b3));
+   (* HU_SET = "XLXI_173_15" *) 
+   M2_1_MXILINX_bcd_design  XLXI_173 (.D0(XLXN_410), 
+                                     .D1(XLXN_163), 
+                                     .S0(XLXN_156), 
+                                     .O(b2));
+   (* HU_SET = "XLXI_174_16" *) 
+   M2_1_MXILINX_bcd_design  XLXI_174 (.D0(XLXN_408), 
+                                     .D1(XLXN_170), 
+                                     .S0(XLXN_156), 
+                                     .O(b4));
+   (* HU_SET = "XLXI_175_17" *) 
+   M2_1_MXILINX_bcd_design  XLXI_175 (.D0(a1), 
+                                     .D1(XLXN_164), 
+                                     .S0(XLXN_156), 
+                                     .O(b1));
+   BUF  XLXI_374 (.I(a7), 
+                 .O(b7));
+   BUF  XLXI_375 (.I(a0), 
+                 .O(b0));
+   BUF  XLXI_377 (.I(a6), 
+                 .O());
+endmodule

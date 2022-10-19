@@ -1,0 +1,7 @@
+MODULE updown_top_top
+	SUBMODULE Updown_top
+		INSTANCE XLXI_1
+	SUBMODULE Updown_design
+		INSTANCE XLXI_2
+	SUBMODULE Updown_design
+		INSTANCE XLXI_3

@@ -1,0 +1,13 @@
+MODULE indianpoker_top
+	SUBMODULE updown_top_top
+		INSTANCE XLXI_1
+	SUBMODULE random1_design
+		INSTANCE XLXI_2
+	SUBMODULE random_design
+		INSTANCE XLXI_3
+	SUBMODULE mux2_design
+		INSTANCE XLXI_100
+	SUBMODULE mux2_design
+		INSTANCE XLXI_99
+	SUBMODULE addten_design
+		INSTANCE XLXI_191

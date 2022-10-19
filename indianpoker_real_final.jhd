@@ -1,0 +1,9 @@
+MODULE indianpoker_real_final
+	SUBMODULE indianpoker_final3
+		INSTANCE XLXI_1
+	SUBMODULE switch_design
+		INSTANCE XLXI_2
+	SUBMODULE switch_design
+		INSTANCE XLXI_3
+	SUBMODULE switch_design
+		INSTANCE XLXI_4

@@ -1,0 +1,1 @@
+-intstyle "ise" -incremental -lib "unisims_ver" -lib "unimacro_ver" -lib "xilinxcorelib_ver" -o "C:/Users/limhb/ISE/project_2_test/indianpoker_real_final_sch_tb_isim_beh.exe" -prj "C:/Users/limhb/ISE/project_2_test/indianpoker_real_final_sch_tb_beh.prj" "work.indianpoker_real_final_sch_tb" "work.glbl" 

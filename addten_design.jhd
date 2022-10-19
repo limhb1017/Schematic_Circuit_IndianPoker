@@ -1,0 +1,3 @@
+MODULE addten_design
+	SUBMODULE mux2_design
+		INSTANCE XLXI_136

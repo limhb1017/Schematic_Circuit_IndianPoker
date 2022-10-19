@@ -1,0 +1,1 @@
+sch2sym -intstyle ise -family spartan3 -w -refsym segment_top C:/Users/limhb/ISE/project_2_test/segment_top.sch C:/Users/limhb/ISE/project_2_test/segment_top.sym 

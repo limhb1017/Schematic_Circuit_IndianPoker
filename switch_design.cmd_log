@@ -1,0 +1,3 @@
+sch2sym -intstyle ise -family spartan3 -w -refsym switch_design C:/Users/limhb/ISE/project_2_test/switch_design.sch C:/Users/limhb/ISE/project_2_test/switch_design.sym 
+sch2sym -intstyle ise -family spartan3 -w -refsym switch_design C:/Users/limhb/ISE/project_2_test/switch_design.sch C:/Users/limhb/ISE/project_2_test/switch_design.sym 
+sch2sym -intstyle ise -family spartan3 -w -refsym switch_design C:/Users/limhb/ISE/project_2_test/switch_design.sch C:/Users/limhb/ISE/project_2_test/switch_design.sym 

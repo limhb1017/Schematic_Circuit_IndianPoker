@@ -1,0 +1,18 @@
+sch2sym -intstyle ise -family spartan3 -w -refsym Updown_top C:/Users/limhb/ISE/project_2_test/Updown_top.sch C:/Users/limhb/ISE/project_2_test/Updown_top.sym 
+sch2sym -intstyle ise -family spartan3 -w -refsym Updown_top C:/Users/limhb/ISE/project_2_test/Updown_top.sch C:/Users/limhb/ISE/project_2_test/Updown_top.sym 
+xst -intstyle ise -ifn "C:/Users/limhb/ISE/project_2_test/Updown_top.xst" -ofn "C:/Users/limhb/ISE/project_2_test/Updown_top.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -i -p xc3s200-ft256-4 Updown_top.ngc Updown_top.ngd  
+map -intstyle ise -p xc3s200-ft256-4 -cm area -ir off -pr off -c 100 -o Updown_top_map.ncd Updown_top.ngd Updown_top.pcf 
+par -w -intstyle ise -ol high -t 1 Updown_top_map.ncd Updown_top.ncd Updown_top.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml Updown_top.twx Updown_top.ncd -o Updown_top.twr Updown_top.pcf 
+xst -intstyle ise -ifn "C:/Users/limhb/ISE/project_2_test/Updown_top.xst" -ofn "C:/Users/limhb/ISE/project_2_test/Updown_top.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -i -p xc3s200-ft256-4 Updown_top.ngc Updown_top.ngd  
+map -intstyle ise -p xc3s200-ft256-4 -cm area -ir off -pr off -c 100 -o Updown_top_map.ncd Updown_top.ngd Updown_top.pcf 
+par -w -intstyle ise -ol high -t 1 Updown_top_map.ncd Updown_top.ncd Updown_top.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml Updown_top.twx Updown_top.ncd -o Updown_top.twr Updown_top.pcf 
+xst -intstyle ise -ifn "C:/Users/limhb/ISE/project_2_test/Updown_top.xst" -ofn "C:/Users/limhb/ISE/project_2_test/Updown_top.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -i -p xc3s200-ft256-4 Updown_top.ngc Updown_top.ngd  
+map -intstyle ise -p xc3s200-ft256-4 -cm area -ir off -pr off -c 100 -o Updown_top_map.ncd Updown_top.ngd Updown_top.pcf 
+par -w -intstyle ise -ol high -t 1 Updown_top_map.ncd Updown_top.ncd Updown_top.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml Updown_top.twx Updown_top.ncd -o Updown_top.twr Updown_top.pcf 
+sch2sym -intstyle ise -family spartan3 -w -refsym Updown_top C:/Users/limhb/ISE/project_2_test/Updown_top.sch C:/Users/limhb/ISE/project_2_test/Updown_top.sym 

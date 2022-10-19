@@ -1,0 +1,471 @@
+////////////////////////////////////////////////////////////////////////////////
+// Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+////////////////////////////////////////////////////////////////////////////////
+//   ____  ____ 
+//  /   /\/   / 
+// /___/  \  /    Vendor: Xilinx 
+// \   \   \/     Version : 14.7
+//  \   \         Application : sch2hdl
+//  /   /         Filename : Updown_design.vf
+// /___/   /\     Timestamp : 01/23/2021 12:25:57
+// \   \  /  \ 
+//  \___\/\___\ 
+//
+//Command: sch2hdl -intstyle ise -family spartan3 -verilog C:/Users/limhb/ISE/project_2_test/Updown_design.vf -w C:/Users/limhb/ISE/project_2_test/Updown_design.sch
+//Design Name: Updown_design
+//Device: spartan3
+//Purpose:
+//    This verilog netlist is translated from an ECS schematic.It can be 
+//    synthesized and simulated, but it should not be modified. 
+//
+`timescale 1ns / 1ps
+
+module M2_1B1_MXILINX_Updown_design(D0, 
+                                    D1, 
+                                    S0, 
+                                    O);
+
+    input D0;
+    input D1;
+    input S0;
+   output O;
+   
+   wire M0;
+   wire M1;
+   
+   AND2B2  I_36_7 (.I0(S0), 
+                  .I1(D0), 
+                  .O(M0));
+   OR2  I_36_8 (.I0(M1), 
+               .I1(M0), 
+               .O(O));
+   AND2  I_36_9 (.I0(D1), 
+                .I1(S0), 
+                .O(M1));
+endmodule
+`timescale 1ns / 1ps
+
+module M2_1_MXILINX_Updown_design(D0, 
+                                  D1, 
+                                  S0, 
+                                  O);
+
+    input D0;
+    input D1;
+    input S0;
+   output O;
+   
+   wire M0;
+   wire M1;
+   
+   AND2B1  I_36_7 (.I0(S0), 
+                  .I1(D0), 
+                  .O(M0));
+   OR2  I_36_8 (.I0(M1), 
+               .I1(M0), 
+               .O(O));
+   AND2  I_36_9 (.I0(D1), 
+                .I1(S0), 
+                .O(M1));
+endmodule
+`timescale 1ns / 1ps
+
+module FTCLEX_MXILINX_Updown_design(C, 
+                                    CE, 
+                                    CLR, 
+                                    D, 
+                                    L, 
+                                    T, 
+                                    Q);
+
+   parameter INIT = 1'b0;
+   
+    input C;
+    input CE;
+    input CLR;
+    input D;
+    input L;
+    input T;
+   output Q;
+   
+   wire MD;
+   wire TQ;
+   wire Q_DUMMY;
+   
+   assign Q = Q_DUMMY;
+   (* HU_SET = "I_36_30_0" *) 
+   M2_1_MXILINX_Updown_design  I_36_30 (.D0(TQ), 
+                                       .D1(D), 
+                                       .S0(L), 
+                                       .O(MD));
+   XOR2  I_36_32 (.I0(T), 
+                 .I1(Q_DUMMY), 
+                 .O(TQ));
+   (* RLOC = "X0Y0" *) 
+   FDCE  I_36_35 (.C(C), 
+                 .CE(CE), 
+                 .CLR(CLR), 
+                 .D(MD), 
+                 .Q(Q_DUMMY));
+endmodule
+`timescale 1ns / 1ps
+
+module CB8CLED_MXILINX_Updown_design(C, 
+                                     CE, 
+                                     CLR, 
+                                     D, 
+                                     L, 
+                                     UP, 
+                                     CEO, 
+                                     Q, 
+                                     TC);
+
+    input C;
+    input CE;
+    input CLR;
+    input [7:0] D;
+    input L;
+    input UP;
+   output CEO;
+   output [7:0] Q;
+   output TC;
+   
+   wire OR_CE_L;
+   wire TC_DN;
+   wire TC_UP;
+   wire T1;
+   wire T2;
+   wire T2_DN;
+   wire T2_UP;
+   wire T3;
+   wire T3_DN;
+   wire T3_UP;
+   wire T4;
+   wire T4_DN;
+   wire T4_UP;
+   wire T5;
+   wire T5_DN;
+   wire T5_UP;
+   wire T6;
+   wire T6_DN;
+   wire T6_UP;
+   wire T7;
+   wire T7_DN;
+   wire T7_UP;
+   wire XLXN_1;
+   wire [7:0] Q_DUMMY;
+   wire TC_DUMMY;
+   
+   assign Q[7:0] = Q_DUMMY[7:0];
+   assign TC = TC_DUMMY;
+   (* HU_SET = "I_Q0_8" *) 
+   FTCLEX_MXILINX_Updown_design #( .INIT(1'b0) ) I_Q0 (.C(C), 
+                                      .CE(OR_CE_L), 
+                                      .CLR(CLR), 
+                                      .D(D[0]), 
+                                      .L(L), 
+                                      .T(XLXN_1), 
+                                      .Q(Q_DUMMY[0]));
+   (* HU_SET = "I_Q1_7" *) 
+   FTCLEX_MXILINX_Updown_design #( .INIT(1'b0) ) I_Q1 (.C(C), 
+                                      .CE(OR_CE_L), 
+                                      .CLR(CLR), 
+                                      .D(D[1]), 
+                                      .L(L), 
+                                      .T(T1), 
+                                      .Q(Q_DUMMY[1]));
+   (* HU_SET = "I_Q2_6" *) 
+   FTCLEX_MXILINX_Updown_design #( .INIT(1'b0) ) I_Q2 (.C(C), 
+                                      .CE(OR_CE_L), 
+                                      .CLR(CLR), 
+                                      .D(D[2]), 
+                                      .L(L), 
+                                      .T(T2), 
+                                      .Q(Q_DUMMY[2]));
+   (* HU_SET = "I_Q3_5" *) 
+   FTCLEX_MXILINX_Updown_design #( .INIT(1'b0) ) I_Q3 (.C(C), 
+                                      .CE(OR_CE_L), 
+                                      .CLR(CLR), 
+                                      .D(D[3]), 
+                                      .L(L), 
+                                      .T(T3), 
+                                      .Q(Q_DUMMY[3]));
+   (* HU_SET = "I_Q4_4" *) 
+   FTCLEX_MXILINX_Updown_design #( .INIT(1'b0) ) I_Q4 (.C(C), 
+                                      .CE(OR_CE_L), 
+                                      .CLR(CLR), 
+                                      .D(D[4]), 
+                                      .L(L), 
+                                      .T(T4), 
+                                      .Q(Q_DUMMY[4]));
+   (* HU_SET = "I_Q5_3" *) 
+   FTCLEX_MXILINX_Updown_design #( .INIT(1'b0) ) I_Q5 (.C(C), 
+                                      .CE(OR_CE_L), 
+                                      .CLR(CLR), 
+                                      .D(D[5]), 
+                                      .L(L), 
+                                      .T(T5), 
+                                      .Q(Q_DUMMY[5]));
+   (* HU_SET = "I_Q6_2" *) 
+   FTCLEX_MXILINX_Updown_design #( .INIT(1'b0) ) I_Q6 (.C(C), 
+                                      .CE(OR_CE_L), 
+                                      .CLR(CLR), 
+                                      .D(D[6]), 
+                                      .L(L), 
+                                      .T(T6), 
+                                      .Q(Q_DUMMY[6]));
+   (* HU_SET = "I_Q7_1" *) 
+   FTCLEX_MXILINX_Updown_design #( .INIT(1'b0) ) I_Q7 (.C(C), 
+                                      .CE(OR_CE_L), 
+                                      .CLR(CLR), 
+                                      .D(D[7]), 
+                                      .L(L), 
+                                      .T(T7), 
+                                      .Q(Q_DUMMY[7]));
+   (* HU_SET = "I_TC_13" *) 
+   M2_1_MXILINX_Updown_design  I_TC (.D0(TC_DN), 
+                                    .D1(TC_UP), 
+                                    .S0(UP), 
+                                    .O(TC_DUMMY));
+   (* HU_SET = "I_T1_16" *) 
+   M2_1B1_MXILINX_Updown_design  I_T1 (.D0(Q_DUMMY[0]), 
+                                      .D1(Q_DUMMY[0]), 
+                                      .S0(UP), 
+                                      .O(T1));
+   (* HU_SET = "I_T2_9" *) 
+   M2_1_MXILINX_Updown_design  I_T2 (.D0(T2_DN), 
+                                    .D1(T2_UP), 
+                                    .S0(UP), 
+                                    .O(T2));
+   (* HU_SET = "I_T3_10" *) 
+   M2_1_MXILINX_Updown_design  I_T3 (.D0(T3_DN), 
+                                    .D1(T3_UP), 
+                                    .S0(UP), 
+                                    .O(T3));
+   (* HU_SET = "I_T4_15" *) 
+   M2_1_MXILINX_Updown_design  I_T4 (.D0(T4_DN), 
+                                    .D1(T4_UP), 
+                                    .S0(UP), 
+                                    .O(T4));
+   (* HU_SET = "I_T5_14" *) 
+   M2_1_MXILINX_Updown_design  I_T5 (.D0(T5_DN), 
+                                    .D1(T5_UP), 
+                                    .S0(UP), 
+                                    .O(T5));
+   (* HU_SET = "I_T6_11" *) 
+   M2_1_MXILINX_Updown_design  I_T6 (.D0(T6_DN), 
+                                    .D1(T6_UP), 
+                                    .S0(UP), 
+                                    .O(T6));
+   (* HU_SET = "I_T7_12" *) 
+   M2_1_MXILINX_Updown_design  I_T7 (.D0(T7_DN), 
+                                    .D1(T7_UP), 
+                                    .S0(UP), 
+                                    .O(T7));
+   AND5  I_36_31 (.I0(Q_DUMMY[7]), 
+                 .I1(Q_DUMMY[6]), 
+                 .I2(Q_DUMMY[5]), 
+                 .I3(Q_DUMMY[4]), 
+                 .I4(T4), 
+                 .O(TC_UP));
+   AND4  I_36_33 (.I0(Q_DUMMY[6]), 
+                 .I1(Q_DUMMY[5]), 
+                 .I2(Q_DUMMY[4]), 
+                 .I3(T4), 
+                 .O(T7_UP));
+   AND4B3  I_36_34 (.I0(Q_DUMMY[6]), 
+                   .I1(Q_DUMMY[5]), 
+                   .I2(Q_DUMMY[4]), 
+                   .I3(T4), 
+                   .O(T7_DN));
+   AND2B2  I_36_36 (.I0(Q_DUMMY[1]), 
+                   .I1(Q_DUMMY[0]), 
+                   .O(T2_DN));
+   VCC  I_36_38 (.P(XLXN_1));
+   AND2B1  I_36_40 (.I0(Q_DUMMY[4]), 
+                   .I1(T4), 
+                   .O(T5_DN));
+   AND3  I_36_41 (.I0(Q_DUMMY[5]), 
+                 .I1(Q_DUMMY[4]), 
+                 .I2(T4), 
+                 .O(T6_UP));
+   AND3B2  I_36_42 (.I0(Q_DUMMY[5]), 
+                   .I1(Q_DUMMY[4]), 
+                   .I2(T4), 
+                   .O(T6_DN));
+   AND3B3  I_36_46 (.I0(Q_DUMMY[2]), 
+                   .I1(Q_DUMMY[1]), 
+                   .I2(Q_DUMMY[0]), 
+                   .O(T3_DN));
+   AND4B4  I_36_47 (.I0(Q_DUMMY[3]), 
+                   .I1(Q_DUMMY[2]), 
+                   .I2(Q_DUMMY[1]), 
+                   .I3(Q_DUMMY[0]), 
+                   .O(T4_DN));
+   AND4  I_36_48 (.I0(Q_DUMMY[3]), 
+                 .I1(Q_DUMMY[2]), 
+                 .I2(Q_DUMMY[1]), 
+                 .I3(Q_DUMMY[0]), 
+                 .O(T4_UP));
+   AND2  I_36_50 (.I0(Q_DUMMY[1]), 
+                 .I1(Q_DUMMY[0]), 
+                 .O(T2_UP));
+   AND3  I_36_51 (.I0(Q_DUMMY[2]), 
+                 .I1(Q_DUMMY[1]), 
+                 .I2(Q_DUMMY[0]), 
+                 .O(T3_UP));
+   AND2  I_36_52 (.I0(Q_DUMMY[4]), 
+                 .I1(T4), 
+                 .O(T5_UP));
+   AND5B4  I_36_55 (.I0(Q_DUMMY[7]), 
+                   .I1(Q_DUMMY[6]), 
+                   .I2(Q_DUMMY[5]), 
+                   .I3(Q_DUMMY[4]), 
+                   .I4(T4), 
+                   .O(TC_DN));
+   AND2  I_36_63 (.I0(CE), 
+                 .I1(TC_DUMMY), 
+                 .O(CEO));
+   OR2  I_36_74 (.I0(CE), 
+                .I1(L), 
+                .O(OR_CE_L));
+endmodule
+`timescale 1ns / 1ps
+
+module COMP8_MXILINX_Updown_design(A, 
+                                   B, 
+                                   EQ);
+
+    input [7:0] A;
+    input [7:0] B;
+   output EQ;
+   
+   wire AB0;
+   wire AB1;
+   wire AB2;
+   wire AB3;
+   wire AB4;
+   wire AB5;
+   wire AB6;
+   wire AB7;
+   wire AB03;
+   wire AB47;
+   
+   AND4  I_36_32 (.I0(AB7), 
+                 .I1(AB6), 
+                 .I2(AB5), 
+                 .I3(AB4), 
+                 .O(AB47));
+   XNOR2  I_36_33 (.I0(B[6]), 
+                  .I1(A[6]), 
+                  .O(AB6));
+   XNOR2  I_36_34 (.I0(B[7]), 
+                  .I1(A[7]), 
+                  .O(AB7));
+   XNOR2  I_36_35 (.I0(B[5]), 
+                  .I1(A[5]), 
+                  .O(AB5));
+   XNOR2  I_36_36 (.I0(B[4]), 
+                  .I1(A[4]), 
+                  .O(AB4));
+   AND4  I_36_41 (.I0(AB3), 
+                 .I1(AB2), 
+                 .I2(AB1), 
+                 .I3(AB0), 
+                 .O(AB03));
+   XNOR2  I_36_42 (.I0(B[2]), 
+                  .I1(A[2]), 
+                  .O(AB2));
+   XNOR2  I_36_43 (.I0(B[3]), 
+                  .I1(A[3]), 
+                  .O(AB3));
+   XNOR2  I_36_44 (.I0(B[1]), 
+                  .I1(A[1]), 
+                  .O(AB1));
+   XNOR2  I_36_45 (.I0(B[0]), 
+                  .I1(A[0]), 
+                  .O(AB0));
+   AND2  I_36_50 (.I0(AB47), 
+                 .I1(AB03), 
+                 .O(EQ));
+endmodule
+`timescale 1ns / 1ps
+
+module Updown_design(CLK, 
+                     CLR, 
+                     Down, 
+                     EN, 
+                     L, 
+                     Max, 
+                     min, 
+                     Up, 
+                     Q);
+
+    input CLK;
+    input CLR;
+    input Down;
+    input EN;
+    input L;
+    input [7:0] Max;
+    input [7:0] min;
+    input Up;
+   output [7:0] Q;
+   
+   wire [7:0] D;
+   wire XLXN_18;
+   wire XLXN_48;
+   wire XLXN_49;
+   wire XLXN_57;
+   wire XLXN_58;
+   wire XLXN_67;
+   wire XLXN_69;
+   wire XLXN_70;
+   wire XLXN_71;
+   wire [7:0] Q_DUMMY;
+   
+   assign Q[7:0] = Q_DUMMY[7:0];
+   (* HU_SET = "XLXI_1_19" *) 
+   CB8CLED_MXILINX_Updown_design  XLXI_1 (.C(CLK), 
+                                         .CE(XLXN_58), 
+                                         .CLR(CLR), 
+                                         .D(D[7:0]), 
+                                         .L(XLXN_18), 
+                                         .UP(XLXN_49), 
+                                         .CEO(), 
+                                         .Q(Q_DUMMY[7:0]), 
+                                         .TC());
+   (* HU_SET = "XLXI_3_17" *) 
+   COMP8_MXILINX_Updown_design  XLXI_3 (.A(Q_DUMMY[7:0]), 
+                                       .B(Max[7:0]), 
+                                       .EQ(XLXN_71));
+   (* HU_SET = "XLXI_4_18" *) 
+   COMP8_MXILINX_Updown_design  XLXI_4 (.A(Q_DUMMY[7:0]), 
+                                       .B(min[7:0]), 
+                                       .EQ(XLXN_70));
+   AND2  XLXI_20 (.I0(L), 
+                 .I1(XLXN_48), 
+                 .O(XLXN_18));
+   VCC  XLXI_21 (.P(XLXN_48));
+   VCC  XLXI_23 (.P(D[0]));
+   GND  XLXI_24 (.G(D[1]));
+   GND  XLXI_25 (.G(D[2]));
+   GND  XLXI_26 (.G(D[3]));
+   GND  XLXI_27 (.G(D[4]));
+   GND  XLXI_28 (.G(D[5]));
+   GND  XLXI_29 (.G(D[6]));
+   GND  XLXI_30 (.G(D[7]));
+   INV  XLXI_31 (.I(Down), 
+                .O(XLXN_49));
+   AND2  XLXI_34 (.I0(EN), 
+                 .I1(XLXN_57), 
+                 .O(XLXN_58));
+   OR2  XLXI_36 (.I0(XLXN_69), 
+                .I1(XLXN_67), 
+                .O(XLXN_57));
+   AND2B1  XLXI_37 (.I0(XLXN_71), 
+                   .I1(Up), 
+                   .O(XLXN_67));
+   AND2B1  XLXI_38 (.I0(XLXN_70), 
+                   .I1(Down), 
+                   .O(XLXN_69));
+endmodule

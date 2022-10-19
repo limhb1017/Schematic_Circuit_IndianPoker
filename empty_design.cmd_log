@@ -1,0 +1,2 @@
+sch2sym -intstyle ise -family spartan3 -w -refsym empty_design C:/Users/limhb/ISE/project_2_test/empty_design.sch C:/Users/limhb/ISE/project_2_test/empty_design.sym 
+sch2sym -intstyle ise -family spartan3 -w -refsym empty_design C:/Users/limhb/ISE/project_2_test/empty_design.sch C:/Users/limhb/ISE/project_2_test/empty_design.sym 

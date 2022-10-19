@@ -1,0 +1,1 @@
+sch2sym -intstyle ise -family spartan3 -w -refsym mux2_design C:/Users/limhb/ISE/project_2_test/mux2_design.sch C:/Users/limhb/ISE/project_2_test/mux2_design.sym 

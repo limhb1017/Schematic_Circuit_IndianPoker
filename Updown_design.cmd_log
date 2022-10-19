@@ -1,0 +1,1 @@
+sch2sym -intstyle ise -family spartan3 -refsym Updown_design C:/Users/limhb/ISE/project_2_test/Updown_design.sch C:/Users/limhb/ISE/project_2_test/Updown_design.sym 

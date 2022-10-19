@@ -1,0 +1,2 @@
+sch2sym -intstyle ise -family spartan3 -w -refsym indianpoker_final C:/Users/limhb/ISE/project_2_test/indianpoker_final.sch C:/Users/limhb/ISE/project_2_test/indianpoker_final.sym 
+sch2sym -intstyle ise -family spartan3 -w -refsym indianpoker_final C:/Users/limhb/ISE/project_2_test/indianpoker_final.sch C:/Users/limhb/ISE/project_2_test/indianpoker_final.sym 

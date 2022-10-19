@@ -1,0 +1,23 @@
+MODULE indianpoker_final
+	SUBMODULE indianpoker_top_top_top
+		INSTANCE XLXI_1
+	SUBMODULE bcd2_design
+		INSTANCE XLXI_4
+	SUBMODULE bcd2_design
+		INSTANCE XLXI_5
+	SUBMODULE bcd2_design
+		INSTANCE XLXI_6
+	SUBMODULE bcd2_design
+		INSTANCE XLXI_7
+	SUBMODULE segment_top
+		INSTANCE XLXI_10
+	SUBMODULE segment_top
+		INSTANCE XLXI_11
+	SUBMODULE segment_top
+		INSTANCE XLXI_23
+	SUBMODULE segment_top
+		INSTANCE XLXI_24
+	SUBMODULE segment_top
+		INSTANCE XLXI_26
+	SUBMODULE segment_top
+		INSTANCE XLXI_28

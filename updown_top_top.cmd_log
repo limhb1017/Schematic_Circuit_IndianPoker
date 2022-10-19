@@ -1,0 +1,3 @@
+sch2sym -intstyle ise -family spartan3 -w -refsym updown_top_top C:/Users/limhb/ISE/project_2_test/updown_top_top.sch C:/Users/limhb/ISE/project_2_test/updown_top_top.sym 
+sch2sym -intstyle ise -family spartan3 -w -refsym updown_top_top C:/Users/limhb/ISE/project_2_test/updown_top_top.sch C:/Users/limhb/ISE/project_2_test/updown_top_top.sym 
+sch2sym -intstyle ise -family spartan3 -w -refsym updown_top_top C:/Users/limhb/ISE/project_2_test/updown_top_top.sch C:/Users/limhb/ISE/project_2_test/updown_top_top.sym 

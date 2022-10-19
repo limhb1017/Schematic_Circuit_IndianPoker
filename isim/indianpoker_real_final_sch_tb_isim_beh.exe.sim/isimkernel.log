@@ -1,0 +1,29 @@
+Command line:
+   indianpoker_real_final_sch_tb_isim_beh.exe
+     -simmode  gui
+     -simrunnum  0
+     -socket  6689
+
+Tue Jan 26 02:23:10 2021
+
+
+ Elaboration Time: 0.390625 sec
+
+ Current Memory Usage: 5192.75 Meg
+
+ Total Signals          : 11559
+ Total Nets             : 3241
+ Total Signal Drivers   : 3138
+ Total Blocks           : 2651
+ Total Primitive Blocks : 2283
+ Total Processes        : 3507
+ Total Traceable Variables  : 304
+ Total Scalar Nets and Variables : 3607
+Total Line Count : 1715
+
+ Total Simulation Time: 0.453125 sec
+
+ Current Memory Usage: 5507.33 Meg
+
+Tue Jan 26 02:23:43 2021
+

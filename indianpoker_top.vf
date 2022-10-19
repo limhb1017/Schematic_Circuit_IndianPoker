@@ -1,0 +1,2441 @@
+////////////////////////////////////////////////////////////////////////////////
+// Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+////////////////////////////////////////////////////////////////////////////////
+//   ____  ____ 
+//  /   /\/   / 
+// /___/  \  /    Vendor: Xilinx 
+// \   \   \/     Version : 14.7
+//  \   \         Application : sch2hdl
+//  /   /         Filename : indianpoker_top.vf
+// /___/   /\     Timestamp : 01/25/2021 23:13:34
+// \   \  /  \ 
+//  \___\/\___\ 
+//
+//Command: sch2hdl -intstyle ise -family spartan3 -verilog C:/Users/limhb/ISE/project_2_test/indianpoker_top.vf -w C:/Users/limhb/ISE/project_2_test/indianpoker_top.sch
+//Design Name: indianpoker_top
+//Device: spartan3
+//Purpose:
+//    This verilog netlist is translated from an ECS schematic.It can be 
+//    synthesized and simulated, but it should not be modified. 
+//
+`timescale 1ns / 1ps
+
+module M2_1_MXILINX_indianpoker_top(D0, 
+                                    D1, 
+                                    S0, 
+                                    O);
+
+    input D0;
+    input D1;
+    input S0;
+   output O;
+   
+   wire M0;
+   wire M1;
+   
+   AND2B1  I_36_7 (.I0(S0), 
+                  .I1(D0), 
+                  .O(M0));
+   OR2  I_36_8 (.I0(M1), 
+               .I1(M0), 
+               .O(O));
+   AND2  I_36_9 (.I0(D1), 
+                .I1(S0), 
+                .O(M1));
+endmodule
+`timescale 1ns / 1ps
+
+module mux2_design_MUSER_indianpoker_top(D0, 
+                                         D1, 
+                                         S, 
+                                         O);
+
+    input [7:0] D0;
+    input [7:0] D1;
+    input S;
+   output [7:0] O;
+   
+   
+   (* HU_SET = "XLXI_1_0" *) 
+   M2_1_MXILINX_indianpoker_top  XLXI_1 (.D0(D0[7]), 
+                                        .D1(D1[7]), 
+                                        .S0(S), 
+                                        .O(O[7]));
+   (* HU_SET = "XLXI_2_1" *) 
+   M2_1_MXILINX_indianpoker_top  XLXI_2 (.D0(D0[6]), 
+                                        .D1(D1[6]), 
+                                        .S0(S), 
+                                        .O(O[6]));
+   (* HU_SET = "XLXI_3_2" *) 
+   M2_1_MXILINX_indianpoker_top  XLXI_3 (.D0(D0[5]), 
+                                        .D1(D1[5]), 
+                                        .S0(S), 
+                                        .O(O[5]));
+   (* HU_SET = "XLXI_4_3" *) 
+   M2_1_MXILINX_indianpoker_top  XLXI_4 (.D0(D0[4]), 
+                                        .D1(D1[4]), 
+                                        .S0(S), 
+                                        .O(O[4]));
+   (* HU_SET = "XLXI_5_4" *) 
+   M2_1_MXILINX_indianpoker_top  XLXI_5 (.D0(D0[3]), 
+                                        .D1(D1[3]), 
+                                        .S0(S), 
+                                        .O(O[3]));
+   (* HU_SET = "XLXI_6_5" *) 
+   M2_1_MXILINX_indianpoker_top  XLXI_6 (.D0(D0[2]), 
+                                        .D1(D1[2]), 
+                                        .S0(S), 
+                                        .O(O[2]));
+   (* HU_SET = "XLXI_9_6" *) 
+   M2_1_MXILINX_indianpoker_top  XLXI_9 (.D0(D0[1]), 
+                                        .D1(D1[1]), 
+                                        .S0(S), 
+                                        .O(O[1]));
+   (* HU_SET = "XLXI_10_7" *) 
+   M2_1_MXILINX_indianpoker_top  XLXI_10 (.D0(D0[0]), 
+                                         .D1(D1[0]), 
+                                         .S0(S), 
+                                         .O(O[0]));
+endmodule
+`timescale 1ns / 1ps
+
+module ADD8_MXILINX_indianpoker_top(A, 
+                                    B, 
+                                    CI, 
+                                    CO, 
+                                    OFL, 
+                                    S);
+
+    input [7:0] A;
+    input [7:0] B;
+    input CI;
+   output CO;
+   output OFL;
+   output [7:0] S;
+   
+   wire C0;
+   wire C1;
+   wire C2;
+   wire C3;
+   wire C4;
+   wire C5;
+   wire C6;
+   wire C6O;
+   wire dummy;
+   wire I0;
+   wire I1;
+   wire I2;
+   wire I3;
+   wire I4;
+   wire I5;
+   wire I6;
+   wire I7;
+   wire CO_DUMMY;
+   
+   assign CO = CO_DUMMY;
+   (* RLOC = "X0Y0" *) 
+   FMAP  I_36_16 (.I1(A[0]), 
+                 .I2(B[0]), 
+                 .I3(dummy), 
+                 .I4(dummy), 
+                 .O(I0));
+   (* RLOC = "X0Y0" *) 
+   FMAP  I_36_17 (.I1(A[1]), 
+                 .I2(B[1]), 
+                 .I3(dummy), 
+                 .I4(dummy), 
+                 .O(I1));
+   (* RLOC = "X0Y1" *) 
+   FMAP  I_36_18 (.I1(A[2]), 
+                 .I2(B[2]), 
+                 .I3(dummy), 
+                 .I4(dummy), 
+                 .O(I2));
+   (* RLOC = "X0Y1" *) 
+   FMAP  I_36_19 (.I1(A[3]), 
+                 .I2(B[3]), 
+                 .I3(dummy), 
+                 .I4(dummy), 
+                 .O(I3));
+   (* RLOC = "X0Y2" *) 
+   FMAP  I_36_20 (.I1(A[4]), 
+                 .I2(B[4]), 
+                 .I3(dummy), 
+                 .I4(dummy), 
+                 .O(I4));
+   (* RLOC = "X0Y2" *) 
+   FMAP  I_36_21 (.I1(A[5]), 
+                 .I2(B[5]), 
+                 .I3(dummy), 
+                 .I4(dummy), 
+                 .O(I5));
+   (* RLOC = "X0Y3" *) 
+   FMAP  I_36_22 (.I1(A[6]), 
+                 .I2(B[6]), 
+                 .I3(dummy), 
+                 .I4(dummy), 
+                 .O(I6));
+   (* RLOC = "X0Y3" *) 
+   FMAP  I_36_23 (.I1(A[7]), 
+                 .I2(B[7]), 
+                 .I3(dummy), 
+                 .I4(dummy), 
+                 .O(I7));
+   (* RLOC = "X0Y0" *) 
+   MUXCY_L  I_36_55 (.CI(C0), 
+                    .DI(A[1]), 
+                    .S(I1), 
+                    .LO(C1));
+   (* RLOC = "X0Y1" *) 
+   MUXCY_L  I_36_58 (.CI(C2), 
+                    .DI(A[3]), 
+                    .S(I3), 
+                    .LO(C3));
+   (* RLOC = "X0Y1" *) 
+   MUXCY_L  I_36_62 (.CI(C1), 
+                    .DI(A[2]), 
+                    .S(I2), 
+                    .LO(C2));
+   (* RLOC = "X0Y2" *) 
+   MUXCY_L  I_36_63 (.CI(C3), 
+                    .DI(A[4]), 
+                    .S(I4), 
+                    .LO(C4));
+   (* RLOC = "X0Y3" *) 
+   MUXCY  I_36_64 (.CI(C6), 
+                  .DI(A[7]), 
+                  .S(I7), 
+                  .O(CO_DUMMY));
+   XORCY  I_36_73 (.CI(CI), 
+                  .LI(I0), 
+                  .O(S[0]));
+   XORCY  I_36_74 (.CI(C0), 
+                  .LI(I1), 
+                  .O(S[1]));
+   XORCY  I_36_75 (.CI(C2), 
+                  .LI(I3), 
+                  .O(S[3]));
+   XORCY  I_36_76 (.CI(C1), 
+                  .LI(I2), 
+                  .O(S[2]));
+   XORCY  I_36_77 (.CI(C4), 
+                  .LI(I5), 
+                  .O(S[5]));
+   XORCY  I_36_78 (.CI(C3), 
+                  .LI(I4), 
+                  .O(S[4]));
+   XORCY  I_36_80 (.CI(C6), 
+                  .LI(I7), 
+                  .O(S[7]));
+   XORCY  I_36_81 (.CI(C5), 
+                  .LI(I6), 
+                  .O(S[6]));
+   (* RLOC = "X0Y3" *) 
+   MUXCY_D  I_36_107 (.CI(C5), 
+                     .DI(A[6]), 
+                     .S(I6), 
+                     .LO(C6), 
+                     .O(C6O));
+   (* RLOC = "X0Y2" *) 
+   MUXCY_L  I_36_110 (.CI(C4), 
+                     .DI(A[5]), 
+                     .S(I5), 
+                     .LO(C5));
+   (* RLOC = "X0Y0" *) 
+   MUXCY_L  I_36_111 (.CI(CI), 
+                     .DI(A[0]), 
+                     .S(I0), 
+                     .LO(C0));
+   XOR2  I_36_221 (.I0(A[7]), 
+                  .I1(B[7]), 
+                  .O(I7));
+   XOR2  I_36_222 (.I0(A[6]), 
+                  .I1(B[6]), 
+                  .O(I6));
+   XOR2  I_36_223 (.I0(A[5]), 
+                  .I1(B[5]), 
+                  .O(I5));
+   XOR2  I_36_224 (.I0(A[4]), 
+                  .I1(B[4]), 
+                  .O(I4));
+   XOR2  I_36_225 (.I0(A[3]), 
+                  .I1(B[3]), 
+                  .O(I3));
+   XOR2  I_36_228 (.I0(A[0]), 
+                  .I1(B[0]), 
+                  .O(I0));
+   XOR2  I_36_229 (.I0(A[1]), 
+                  .I1(B[1]), 
+                  .O(I1));
+   XOR2  I_36_230 (.I0(A[2]), 
+                  .I1(B[2]), 
+                  .O(I2));
+   XOR2  I_36_239 (.I0(C6O), 
+                  .I1(CO_DUMMY), 
+                  .O(OFL));
+endmodule
+`timescale 1ns / 1ps
+
+module addten_design_MUSER_indianpoker_top(b, 
+                                           s, 
+                                           o);
+
+    input [7:0] b;
+    input s;
+   output [7:0] o;
+   
+   wire [7:0] aa;
+   wire [7:0] t;
+   wire XLXN_17;
+   
+   (* HU_SET = "XLXI_125_8" *) 
+   ADD8_MXILINX_indianpoker_top  XLXI_125 (.A(aa[7:0]), 
+                                          .B(b[7:0]), 
+                                          .CI(XLXN_17), 
+                                          .CO(), 
+                                          .OFL(), 
+                                          .S(t[7:0]));
+   GND  XLXI_127 (.G(aa[7]));
+   GND  XLXI_128 (.G(aa[6]));
+   GND  XLXI_130 (.G(aa[5]));
+   GND  XLXI_131 (.G(aa[4]));
+   GND  XLXI_132 (.G(aa[2]));
+   GND  XLXI_133 (.G(aa[0]));
+   VCC  XLXI_134 (.P(aa[3]));
+   VCC  XLXI_135 (.P(aa[1]));
+   mux2_design_MUSER_indianpoker_top  XLXI_136 (.D0(b[7:0]), 
+                                               .D1(t[7:0]), 
+                                               .S(s), 
+                                               .O(o[7:0]));
+   GND  XLXI_137 (.G(XLXN_17));
+endmodule
+`timescale 1ns / 1ps
+
+module ADSU8_MXILINX_indianpoker_top(A, 
+                                     ADD, 
+                                     B, 
+                                     CI, 
+                                     CO, 
+                                     OFL, 
+                                     S);
+
+    input [7:0] A;
+    input ADD;
+    input [7:0] B;
+    input CI;
+   output CO;
+   output OFL;
+   output [7:0] S;
+   
+   wire C0;
+   wire C1;
+   wire C2;
+   wire C3;
+   wire C4;
+   wire C5;
+   wire C6;
+   wire C6O;
+   wire dummy;
+   wire I0;
+   wire I1;
+   wire I2;
+   wire I3;
+   wire I4;
+   wire I5;
+   wire I6;
+   wire I7;
+   wire SUB0;
+   wire SUB1;
+   wire SUB2;
+   wire SUB3;
+   wire SUB4;
+   wire SUB5;
+   wire SUB6;
+   wire SUB7;
+   wire CO_DUMMY;
+   
+   assign CO = CO_DUMMY;
+   (* RLOC = "X1Y0" *) 
+   FMAP  I_36_16 (.I1(A[0]), 
+                 .I2(B[0]), 
+                 .I3(ADD), 
+                 .I4(dummy), 
+                 .O(I0));
+   (* RLOC = "X1Y0" *) 
+   FMAP  I_36_17 (.I1(A[1]), 
+                 .I2(B[1]), 
+                 .I3(ADD), 
+                 .I4(dummy), 
+                 .O(I1));
+   (* RLOC = "X1Y1" *) 
+   FMAP  I_36_18 (.I1(A[2]), 
+                 .I2(B[2]), 
+                 .I3(ADD), 
+                 .I4(dummy), 
+                 .O(I2));
+   (* RLOC = "X1Y1" *) 
+   FMAP  I_36_19 (.I1(A[3]), 
+                 .I2(B[3]), 
+                 .I3(ADD), 
+                 .I4(dummy), 
+                 .O(I3));
+   (* RLOC = "X1Y2" *) 
+   FMAP  I_36_20 (.I1(A[4]), 
+                 .I2(B[4]), 
+                 .I3(ADD), 
+                 .I4(dummy), 
+                 .O(I4));
+   (* RLOC = "X1Y2" *) 
+   FMAP  I_36_21 (.I1(A[5]), 
+                 .I2(B[5]), 
+                 .I3(ADD), 
+                 .I4(dummy), 
+                 .O(I5));
+   (* RLOC = "X1Y3" *) 
+   FMAP  I_36_22 (.I1(A[6]), 
+                 .I2(B[6]), 
+                 .I3(ADD), 
+                 .I4(dummy), 
+                 .O(I6));
+   (* RLOC = "X1Y3" *) 
+   FMAP  I_36_23 (.I1(A[7]), 
+                 .I2(B[7]), 
+                 .I3(ADD), 
+                 .I4(dummy), 
+                 .O(I7));
+   XOR3  I_36_50 (.I0(A[0]), 
+                 .I1(B[0]), 
+                 .I2(SUB0), 
+                 .O(I0));
+   (* RLOC = "X1Y0" *) 
+   MUXCY_L  I_36_55 (.CI(C0), 
+                    .DI(A[1]), 
+                    .S(I1), 
+                    .LO(C1));
+   XOR3  I_36_56 (.I0(A[2]), 
+                 .I1(B[2]), 
+                 .I2(SUB2), 
+                 .O(I2));
+   XOR3  I_36_57 (.I0(A[3]), 
+                 .I1(B[3]), 
+                 .I2(SUB3), 
+                 .O(I3));
+   (* RLOC = "X1Y1" *) 
+   MUXCY_L  I_36_58 (.CI(C2), 
+                    .DI(A[3]), 
+                    .S(I3), 
+                    .LO(C3));
+   XOR3  I_36_59 (.I0(A[6]), 
+                 .I1(B[6]), 
+                 .I2(SUB6), 
+                 .O(I6));
+   XOR3  I_36_60 (.I0(A[4]), 
+                 .I1(B[4]), 
+                 .I2(SUB4), 
+                 .O(I4));
+   (* RLOC = "X1Y1" *) 
+   MUXCY_L  I_36_62 (.CI(C1), 
+                    .DI(A[2]), 
+                    .S(I2), 
+                    .LO(C2));
+   (* RLOC = "X1Y2" *) 
+   MUXCY_L  I_36_63 (.CI(C3), 
+                    .DI(A[4]), 
+                    .S(I4), 
+                    .LO(C4));
+   (* RLOC = "X1Y3" *) 
+   MUXCY  I_36_64 (.CI(C6), 
+                  .DI(A[7]), 
+                  .S(I7), 
+                  .O(CO_DUMMY));
+   XORCY  I_36_73 (.CI(CI), 
+                  .LI(I0), 
+                  .O(S[0]));
+   XORCY  I_36_74 (.CI(C0), 
+                  .LI(I1), 
+                  .O(S[1]));
+   XORCY  I_36_75 (.CI(C2), 
+                  .LI(I3), 
+                  .O(S[3]));
+   XORCY  I_36_76 (.CI(C1), 
+                  .LI(I2), 
+                  .O(S[2]));
+   XORCY  I_36_77 (.CI(C4), 
+                  .LI(I5), 
+                  .O(S[5]));
+   XORCY  I_36_78 (.CI(C3), 
+                  .LI(I4), 
+                  .O(S[4]));
+   XOR3  I_36_79 (.I0(A[7]), 
+                 .I1(B[7]), 
+                 .I2(SUB7), 
+                 .O(I7));
+   XORCY  I_36_80 (.CI(C6), 
+                  .LI(I7), 
+                  .O(S[7]));
+   XORCY  I_36_81 (.CI(C5), 
+                  .LI(I6), 
+                  .O(S[6]));
+   XOR3  I_36_100 (.I0(A[1]), 
+                  .I1(B[1]), 
+                  .I2(SUB1), 
+                  .O(I1));
+   (* RLOC = "X1Y3" *) 
+   MUXCY_D  I_36_107 (.CI(C5), 
+                     .DI(A[6]), 
+                     .S(I6), 
+                     .LO(C6), 
+                     .O(C6O));
+   XOR3  I_36_109 (.I0(A[5]), 
+                  .I1(B[5]), 
+                  .I2(SUB5), 
+                  .O(I5));
+   (* RLOC = "X1Y2" *) 
+   MUXCY_L  I_36_110 (.CI(C4), 
+                     .DI(A[5]), 
+                     .S(I5), 
+                     .LO(C5));
+   (* RLOC = "X1Y0" *) 
+   MUXCY_L  I_36_111 (.CI(CI), 
+                     .DI(A[0]), 
+                     .S(I0), 
+                     .LO(C0));
+   INV  I_36_112 (.I(ADD), 
+                 .O(SUB0));
+   XOR2  I_36_221 (.I0(C6O), 
+                  .I1(CO_DUMMY), 
+                  .O(OFL));
+   INV  I_36_222 (.I(ADD), 
+                 .O(SUB1));
+   INV  I_36_223 (.I(ADD), 
+                 .O(SUB2));
+   INV  I_36_224 (.I(ADD), 
+                 .O(SUB3));
+   INV  I_36_225 (.I(ADD), 
+                 .O(SUB4));
+   INV  I_36_226 (.I(ADD), 
+                 .O(SUB5));
+   INV  I_36_227 (.I(ADD), 
+                 .O(SUB6));
+   INV  I_36_228 (.I(ADD), 
+                 .O(SUB7));
+endmodule
+`timescale 1ns / 1ps
+
+module ACC8_MXILINX_indianpoker_top(ADD, 
+                                    B, 
+                                    C, 
+                                    CE, 
+                                    CI, 
+                                    D, 
+                                    L, 
+                                    R, 
+                                    CO, 
+                                    OFL, 
+                                    Q);
+
+    input ADD;
+    input [7:0] B;
+    input C;
+    input CE;
+    input CI;
+    input [7:0] D;
+    input L;
+    input R;
+   output CO;
+   output OFL;
+   output [7:0] Q;
+   
+   wire R_L_CE;
+   wire R_SD0;
+   wire R_SD1;
+   wire R_SD2;
+   wire R_SD3;
+   wire R_SD4;
+   wire R_SD5;
+   wire R_SD6;
+   wire R_SD7;
+   wire [7:0] S;
+   wire SD0;
+   wire SD1;
+   wire SD2;
+   wire SD3;
+   wire SD4;
+   wire SD5;
+   wire SD6;
+   wire SD7;
+   wire XLXN_50;
+   wire [7:0] Q_DUMMY;
+   
+   assign Q[7:0] = Q_DUMMY[7:0];
+   (* RLOC = "X0Y0" *) 
+   FDCE #( .INIT(1'b0) ) I_Q0 (.C(C), 
+              .CE(R_L_CE), 
+              .CLR(XLXN_50), 
+              .D(R_SD0), 
+              .Q(Q_DUMMY[0]));
+   (* RLOC = "X0Y0" *) 
+   FDCE #( .INIT(1'b0) ) I_Q1 (.C(C), 
+              .CE(R_L_CE), 
+              .CLR(XLXN_50), 
+              .D(R_SD1), 
+              .Q(Q_DUMMY[1]));
+   (* RLOC = "X0Y1" *) 
+   FDCE #( .INIT(1'b0) ) I_Q2 (.C(C), 
+              .CE(R_L_CE), 
+              .CLR(XLXN_50), 
+              .D(R_SD2), 
+              .Q(Q_DUMMY[2]));
+   (* RLOC = "X0Y1" *) 
+   FDCE #( .INIT(1'b0) ) I_Q3 (.C(C), 
+              .CE(R_L_CE), 
+              .CLR(XLXN_50), 
+              .D(R_SD3), 
+              .Q(Q_DUMMY[3]));
+   (* RLOC = "X0Y2" *) 
+   FDCE #( .INIT(1'b0) ) I_Q4 (.C(C), 
+              .CE(R_L_CE), 
+              .CLR(XLXN_50), 
+              .D(R_SD4), 
+              .Q(Q_DUMMY[4]));
+   (* RLOC = "X0Y2" *) 
+   FDCE #( .INIT(1'b0) ) I_Q5 (.C(C), 
+              .CE(R_L_CE), 
+              .CLR(XLXN_50), 
+              .D(R_SD5), 
+              .Q(Q_DUMMY[5]));
+   (* RLOC = "X0Y3" *) 
+   FDCE #( .INIT(1'b0) ) I_Q6 (.C(C), 
+              .CE(R_L_CE), 
+              .CLR(XLXN_50), 
+              .D(R_SD6), 
+              .Q(Q_DUMMY[6]));
+   (* RLOC = "X0Y3" *) 
+   FDCE #( .INIT(1'b0) ) I_Q7 (.C(C), 
+              .CE(R_L_CE), 
+              .CLR(XLXN_50), 
+              .D(R_SD7), 
+              .Q(Q_DUMMY[7]));
+   (* HU_SET = "I_SD0_13" *) 
+   M2_1_MXILINX_indianpoker_top  I_SD0 (.D0(S[0]), 
+                                       .D1(D[0]), 
+                                       .S0(L), 
+                                       .O(SD0));
+   (* HU_SET = "I_SD1_14" *) 
+   M2_1_MXILINX_indianpoker_top  I_SD1 (.D0(S[1]), 
+                                       .D1(D[1]), 
+                                       .S0(L), 
+                                       .O(SD1));
+   (* HU_SET = "I_SD2_15" *) 
+   M2_1_MXILINX_indianpoker_top  I_SD2 (.D0(S[2]), 
+                                       .D1(D[2]), 
+                                       .S0(L), 
+                                       .O(SD2));
+   (* HU_SET = "I_SD3_12" *) 
+   M2_1_MXILINX_indianpoker_top  I_SD3 (.D0(S[3]), 
+                                       .D1(D[3]), 
+                                       .S0(L), 
+                                       .O(SD3));
+   (* HU_SET = "I_SD4_16" *) 
+   M2_1_MXILINX_indianpoker_top  I_SD4 (.D0(S[4]), 
+                                       .D1(D[4]), 
+                                       .S0(L), 
+                                       .O(SD4));
+   (* HU_SET = "I_SD5_17" *) 
+   M2_1_MXILINX_indianpoker_top  I_SD5 (.D0(S[5]), 
+                                       .D1(D[5]), 
+                                       .S0(L), 
+                                       .O(SD5));
+   (* HU_SET = "I_SD6_11" *) 
+   M2_1_MXILINX_indianpoker_top  I_SD6 (.D0(S[6]), 
+                                       .D1(D[6]), 
+                                       .S0(L), 
+                                       .O(SD6));
+   (* HU_SET = "I_SD7_10" *) 
+   M2_1_MXILINX_indianpoker_top  I_SD7 (.D0(S[7]), 
+                                       .D1(D[7]), 
+                                       .S0(L), 
+                                       .O(SD7));
+   AND2B1  I_36_24 (.I0(R), 
+                   .I1(SD4), 
+                   .O(R_SD4));
+   AND2B1  I_36_25 (.I0(R), 
+                   .I1(SD5), 
+                   .O(R_SD5));
+   AND2B1  I_36_26 (.I0(R), 
+                   .I1(SD6), 
+                   .O(R_SD6));
+   AND2B1  I_36_27 (.I0(R), 
+                   .I1(SD7), 
+                   .O(R_SD7));
+   GND  I_36_28 (.G(XLXN_50));
+   AND2B1  I_36_31 (.I0(R), 
+                   .I1(SD3), 
+                   .O(R_SD3));
+   AND2B1  I_36_32 (.I0(R), 
+                   .I1(SD2), 
+                   .O(R_SD2));
+   AND2B1  I_36_42 (.I0(R), 
+                   .I1(SD0), 
+                   .O(R_SD0));
+   AND2B1  I_36_45 (.I0(R), 
+                   .I1(SD1), 
+                   .O(R_SD1));
+   (* RLOC = "X0Y3" *) 
+   FMAP  I_36_53 (.I1(L), 
+                 .I2(D[6]), 
+                 .I3(S[6]), 
+                 .I4(R), 
+                 .O(R_SD6));
+   (* RLOC = "X0Y2" *) 
+   FMAP  I_36_54 (.I1(L), 
+                 .I2(D[5]), 
+                 .I3(S[5]), 
+                 .I4(R), 
+                 .O(R_SD5));
+   (* RLOC = "X0Y1" *) 
+   FMAP  I_36_78 (.I1(L), 
+                 .I2(D[3]), 
+                 .I3(S[3]), 
+                 .I4(R), 
+                 .O(R_SD3));
+   (* RLOC = "X0Y1" *) 
+   FMAP  I_36_79 (.I1(L), 
+                 .I2(D[2]), 
+                 .I3(S[2]), 
+                 .I4(R), 
+                 .O(R_SD2));
+   (* RLOC = "X0Y0" *) 
+   FMAP  I_36_80 (.I1(L), 
+                 .I2(D[1]), 
+                 .I3(S[1]), 
+                 .I4(R), 
+                 .O(R_SD1));
+   (* RLOC = "X0Y0" *) 
+   FMAP  I_36_81 (.I1(L), 
+                 .I2(D[0]), 
+                 .I3(S[0]), 
+                 .I4(R), 
+                 .O(R_SD0));
+   (* RLOC = "X0Y3" *) 
+   FMAP  I_36_86 (.I1(L), 
+                 .I2(D[7]), 
+                 .I3(S[7]), 
+                 .I4(R), 
+                 .O(R_SD7));
+   (* RLOC = "X0Y2" *) 
+   FMAP  I_36_87 (.I1(L), 
+                 .I2(D[4]), 
+                 .I3(S[4]), 
+                 .I4(R), 
+                 .O(R_SD4));
+   OR3  I_36_90 (.I0(R), 
+                .I1(CE), 
+                .I2(L), 
+                .O(R_L_CE));
+   (* HU_SET = "I_36_106_9" *) (* RLOC = "X1Y0" *) 
+   ADSU8_MXILINX_indianpoker_top  I_36_106 (.A(Q_DUMMY[7:0]), 
+                                           .ADD(ADD), 
+                                           .B(B[7:0]), 
+                                           .CI(CI), 
+                                           .CO(CO), 
+                                           .OFL(OFL), 
+                                           .S(S[7:0]));
+endmodule
+`timescale 1ns / 1ps
+
+module FD8RE_MXILINX_indianpoker_top(C, 
+                                     CE, 
+                                     D, 
+                                     R, 
+                                     Q);
+
+    input C;
+    input CE;
+    input [7:0] D;
+    input R;
+   output [7:0] Q;
+   
+   
+   FDRE #( .INIT(1'b0) ) I_Q0 (.C(C), 
+              .CE(CE), 
+              .D(D[0]), 
+              .R(R), 
+              .Q(Q[0]));
+   FDRE #( .INIT(1'b0) ) I_Q1 (.C(C), 
+              .CE(CE), 
+              .D(D[1]), 
+              .R(R), 
+              .Q(Q[1]));
+   FDRE #( .INIT(1'b0) ) I_Q2 (.C(C), 
+              .CE(CE), 
+              .D(D[2]), 
+              .R(R), 
+              .Q(Q[2]));
+   FDRE #( .INIT(1'b0) ) I_Q3 (.C(C), 
+              .CE(CE), 
+              .D(D[3]), 
+              .R(R), 
+              .Q(Q[3]));
+   FDRE #( .INIT(1'b0) ) I_Q4 (.C(C), 
+              .CE(CE), 
+              .D(D[4]), 
+              .R(R), 
+              .Q(Q[4]));
+   FDRE #( .INIT(1'b0) ) I_Q5 (.C(C), 
+              .CE(CE), 
+              .D(D[5]), 
+              .R(R), 
+              .Q(Q[5]));
+   FDRE #( .INIT(1'b0) ) I_Q6 (.C(C), 
+              .CE(CE), 
+              .D(D[6]), 
+              .R(R), 
+              .Q(Q[6]));
+   FDRE #( .INIT(1'b0) ) I_Q7 (.C(C), 
+              .CE(CE), 
+              .D(D[7]), 
+              .R(R), 
+              .Q(Q[7]));
+endmodule
+`timescale 1ns / 1ps
+
+module COMPM4_MXILINX_indianpoker_top(A0, 
+                                      A1, 
+                                      A2, 
+                                      A3, 
+                                      B0, 
+                                      B1, 
+                                      B2, 
+                                      B3, 
+                                      GT, 
+                                      LT);
+
+    input A0;
+    input A1;
+    input A2;
+    input A3;
+    input B0;
+    input B1;
+    input B2;
+    input B3;
+   output GT;
+   output LT;
+   
+   wire EQ_1;
+   wire EQ_3;
+   wire EQ2_3;
+   wire GE0_1;
+   wire GE2_3;
+   wire GTA;
+   wire GTB;
+   wire GT_1;
+   wire GT_3;
+   wire GT0_1;
+   wire LE0_1;
+   wire LE2_3;
+   wire LTA;
+   wire LTB;
+   wire LT_1;
+   wire LT_3;
+   wire LT0_1;
+   
+   AND2  I_36_1 (.I0(GT0_1), 
+                .I1(EQ2_3), 
+                .O(GTA));
+   AND2  I_36_2 (.I0(EQ2_3), 
+                .I1(LT0_1), 
+                .O(LTA));
+   NOR2  I_36_3 (.I0(GTB), 
+                .I1(LTB), 
+                .O(EQ2_3));
+   AND2B1  I_36_4 (.I0(A3), 
+                  .I1(B3), 
+                  .O(LT_3));
+   OR2  I_36_5 (.I0(LT_1), 
+               .I1(LE0_1), 
+               .O(LT0_1));
+   AND2B1  I_36_6 (.I0(B3), 
+                  .I1(A3), 
+                  .O(GT_3));
+   AND2B1  I_36_7 (.I0(A1), 
+                  .I1(B1), 
+                  .O(LT_1));
+   XNOR2  I_36_8 (.I0(A3), 
+                 .I1(B3), 
+                 .O(EQ_3));
+   AND2B1  I_36_9 (.I0(B1), 
+                  .I1(A1), 
+                  .O(GT_1));
+   OR2  I_36_11 (.I0(LTB), 
+                .I1(LTA), 
+                .O(LT));
+   OR2  I_36_12 (.I0(GTB), 
+                .I1(GTA), 
+                .O(GT));
+   XNOR2  I_36_13 (.I0(A1), 
+                  .I1(B1), 
+                  .O(EQ_1));
+   AND3B1  I_36_14 (.I0(B2), 
+                   .I1(EQ_3), 
+                   .I2(A2), 
+                   .O(GE2_3));
+   AND3B1  I_36_15 (.I0(A2), 
+                   .I1(EQ_3), 
+                   .I2(B2), 
+                   .O(LE2_3));
+   AND3B1  I_36_16 (.I0(B0), 
+                   .I1(EQ_1), 
+                   .I2(A0), 
+                   .O(GE0_1));
+   AND3B1  I_36_17 (.I0(A0), 
+                   .I1(EQ_1), 
+                   .I2(B0), 
+                   .O(LE0_1));
+   OR2  I_36_18 (.I0(GT_1), 
+                .I1(GE0_1), 
+                .O(GT0_1));
+   OR2  I_36_19 (.I0(GT_3), 
+                .I1(GE2_3), 
+                .O(GTB));
+   OR2  I_36_20 (.I0(LT_3), 
+                .I1(LE2_3), 
+                .O(LTB));
+endmodule
+`timescale 1ns / 1ps
+
+module random_design_MUSER_indianpoker_top(CLK, 
+                                           CLR, 
+                                           EN, 
+                                           r0, 
+                                           r1, 
+                                           r2, 
+                                           r3);
+
+    input CLK;
+    input CLR;
+    input EN;
+   output r0;
+   output r1;
+   output r2;
+   output r3;
+   
+   wire XLXN_15;
+   wire XLXN_16;
+   wire XLXN_17;
+   wire XLXN_18;
+   wire XLXN_19;
+   wire XLXN_23;
+   wire XLXN_65;
+   wire XLXN_66;
+   wire r0_DUMMY;
+   wire r1_DUMMY;
+   wire r2_DUMMY;
+   wire r3_DUMMY;
+   
+   assign r0 = r0_DUMMY;
+   assign r1 = r1_DUMMY;
+   assign r2 = r2_DUMMY;
+   assign r3 = r3_DUMMY;
+   (* HU_SET = "XLXI_10_18" *) 
+   COMPM4_MXILINX_indianpoker_top  XLXI_10 (.A0(r0_DUMMY), 
+                                           .A1(r1_DUMMY), 
+                                           .A2(r2_DUMMY), 
+                                           .A3(r3_DUMMY), 
+                                           .B0(XLXN_16), 
+                                           .B1(XLXN_19), 
+                                           .B2(XLXN_17), 
+                                           .B3(XLXN_18), 
+                                           .GT(XLXN_15), 
+                                           .LT());
+   GND  XLXI_11 (.G(XLXN_16));
+   GND  XLXI_12 (.G(XLXN_17));
+   VCC  XLXI_13 (.P(XLXN_19));
+   VCC  XLXI_14 (.P(XLXN_18));
+   FDE #( .INIT(1'b0) ) XLXI_16 (.C(CLK), 
+                .CE(XLXN_23), 
+                .D(r0_DUMMY), 
+                .Q(r1_DUMMY));
+   FDE #( .INIT(1'b0) ) XLXI_17 (.C(CLK), 
+                .CE(XLXN_23), 
+                .D(r1_DUMMY), 
+                .Q(r2_DUMMY));
+   FDE #( .INIT(1'b0) ) XLXI_18 (.C(CLK), 
+                .CE(XLXN_23), 
+                .D(r2_DUMMY), 
+                .Q(r3_DUMMY));
+   FDE #( .INIT(1'b0) ) XLXI_19 (.C(CLK), 
+                .CE(XLXN_23), 
+                .D(XLXN_65), 
+                .Q(r0_DUMMY));
+   XOR2  XLXI_22 (.I0(r2_DUMMY), 
+                 .I1(r3_DUMMY), 
+                 .O(XLXN_66));
+   OR3  XLXI_25 (.I0(XLXN_15), 
+                .I1(EN), 
+                .I2(CLR), 
+                .O(XLXN_23));
+   OR2  XLXI_26 (.I0(CLR), 
+                .I1(XLXN_66), 
+                .O(XLXN_65));
+endmodule
+`timescale 1ns / 1ps
+
+module random1_design_MUSER_indianpoker_top(CLK, 
+                                            CLR, 
+                                            EN, 
+                                            r0, 
+                                            r1, 
+                                            r2, 
+                                            r3);
+
+    input CLK;
+    input CLR;
+    input EN;
+   output r0;
+   output r1;
+   output r2;
+   output r3;
+   
+   wire XLXN_4;
+   wire XLXN_5;
+   wire XLXN_6;
+   wire XLXN_7;
+   wire XLXN_8;
+   wire XLXN_23;
+   wire XLXN_65;
+   wire XLXN_66;
+   wire r0_DUMMY;
+   wire r1_DUMMY;
+   wire r2_DUMMY;
+   wire r3_DUMMY;
+   
+   assign r0 = r0_DUMMY;
+   assign r1 = r1_DUMMY;
+   assign r2 = r2_DUMMY;
+   assign r3 = r3_DUMMY;
+   (* HU_SET = "XLXI_1_19" *) 
+   COMPM4_MXILINX_indianpoker_top  XLXI_1 (.A0(r0_DUMMY), 
+                                          .A1(r1_DUMMY), 
+                                          .A2(r2_DUMMY), 
+                                          .A3(r3_DUMMY), 
+                                          .B0(XLXN_5), 
+                                          .B1(XLXN_8), 
+                                          .B2(XLXN_6), 
+                                          .B3(XLXN_7), 
+                                          .GT(XLXN_4), 
+                                          .LT());
+   GND  XLXI_2 (.G(XLXN_5));
+   GND  XLXI_3 (.G(XLXN_6));
+   VCC  XLXI_13 (.P(XLXN_8));
+   VCC  XLXI_14 (.P(XLXN_7));
+   FDE #( .INIT(1'b0) ) XLXI_16 (.C(CLK), 
+                .CE(XLXN_23), 
+                .D(r3_DUMMY), 
+                .Q(r2_DUMMY));
+   FDE #( .INIT(1'b0) ) XLXI_17 (.C(CLK), 
+                .CE(XLXN_23), 
+                .D(r2_DUMMY), 
+                .Q(r1_DUMMY));
+   FDE #( .INIT(1'b0) ) XLXI_18 (.C(CLK), 
+                .CE(XLXN_23), 
+                .D(r1_DUMMY), 
+                .Q(r0_DUMMY));
+   FDE #( .INIT(1'b0) ) XLXI_19 (.C(CLK), 
+                .CE(XLXN_23), 
+                .D(XLXN_65), 
+                .Q(r3_DUMMY));
+   XOR2  XLXI_22 (.I0(r1_DUMMY), 
+                 .I1(r0_DUMMY), 
+                 .O(XLXN_66));
+   OR3  XLXI_25 (.I0(XLXN_4), 
+                .I1(EN), 
+                .I2(CLR), 
+                .O(XLXN_23));
+   OR2  XLXI_26 (.I0(CLR), 
+                .I1(XLXN_66), 
+                .O(XLXN_65));
+endmodule
+`timescale 1ns / 1ps
+
+module M2_1B1_MXILINX_indianpoker_top(D0, 
+                                      D1, 
+                                      S0, 
+                                      O);
+
+    input D0;
+    input D1;
+    input S0;
+   output O;
+   
+   wire M0;
+   wire M1;
+   
+   AND2B2  I_36_7 (.I0(S0), 
+                  .I1(D0), 
+                  .O(M0));
+   OR2  I_36_8 (.I0(M1), 
+               .I1(M0), 
+               .O(O));
+   AND2  I_36_9 (.I0(D1), 
+                .I1(S0), 
+                .O(M1));
+endmodule
+`timescale 1ns / 1ps
+
+module FTCLEX_MXILINX_indianpoker_top(C, 
+                                      CE, 
+                                      CLR, 
+                                      D, 
+                                      L, 
+                                      T, 
+                                      Q);
+
+   parameter INIT = 1'b0;
+   
+    input C;
+    input CE;
+    input CLR;
+    input D;
+    input L;
+    input T;
+   output Q;
+   
+   wire MD;
+   wire TQ;
+   wire Q_DUMMY;
+   
+   assign Q = Q_DUMMY;
+   (* HU_SET = "I_36_30_20" *) 
+   M2_1_MXILINX_indianpoker_top  I_36_30 (.D0(TQ), 
+                                         .D1(D), 
+                                         .S0(L), 
+                                         .O(MD));
+   XOR2  I_36_32 (.I0(T), 
+                 .I1(Q_DUMMY), 
+                 .O(TQ));
+   (* RLOC = "X0Y0" *) 
+   FDCE  I_36_35 (.C(C), 
+                 .CE(CE), 
+                 .CLR(CLR), 
+                 .D(MD), 
+                 .Q(Q_DUMMY));
+endmodule
+`timescale 1ns / 1ps
+
+module CB8CLED_MXILINX_indianpoker_top(C, 
+                                       CE, 
+                                       CLR, 
+                                       D, 
+                                       L, 
+                                       UP, 
+                                       CEO, 
+                                       Q, 
+                                       TC);
+
+    input C;
+    input CE;
+    input CLR;
+    input [7:0] D;
+    input L;
+    input UP;
+   output CEO;
+   output [7:0] Q;
+   output TC;
+   
+   wire OR_CE_L;
+   wire TC_DN;
+   wire TC_UP;
+   wire T1;
+   wire T2;
+   wire T2_DN;
+   wire T2_UP;
+   wire T3;
+   wire T3_DN;
+   wire T3_UP;
+   wire T4;
+   wire T4_DN;
+   wire T4_UP;
+   wire T5;
+   wire T5_DN;
+   wire T5_UP;
+   wire T6;
+   wire T6_DN;
+   wire T6_UP;
+   wire T7;
+   wire T7_DN;
+   wire T7_UP;
+   wire XLXN_1;
+   wire [7:0] Q_DUMMY;
+   wire TC_DUMMY;
+   
+   assign Q[7:0] = Q_DUMMY[7:0];
+   assign TC = TC_DUMMY;
+   (* HU_SET = "I_Q0_28" *) 
+   FTCLEX_MXILINX_indianpoker_top #( .INIT(1'b0) ) I_Q0 (.C(C), 
+                                        .CE(OR_CE_L), 
+                                        .CLR(CLR), 
+                                        .D(D[0]), 
+                                        .L(L), 
+                                        .T(XLXN_1), 
+                                        .Q(Q_DUMMY[0]));
+   (* HU_SET = "I_Q1_27" *) 
+   FTCLEX_MXILINX_indianpoker_top #( .INIT(1'b0) ) I_Q1 (.C(C), 
+                                        .CE(OR_CE_L), 
+                                        .CLR(CLR), 
+                                        .D(D[1]), 
+                                        .L(L), 
+                                        .T(T1), 
+                                        .Q(Q_DUMMY[1]));
+   (* HU_SET = "I_Q2_26" *) 
+   FTCLEX_MXILINX_indianpoker_top #( .INIT(1'b0) ) I_Q2 (.C(C), 
+                                        .CE(OR_CE_L), 
+                                        .CLR(CLR), 
+                                        .D(D[2]), 
+                                        .L(L), 
+                                        .T(T2), 
+                                        .Q(Q_DUMMY[2]));
+   (* HU_SET = "I_Q3_25" *) 
+   FTCLEX_MXILINX_indianpoker_top #( .INIT(1'b0) ) I_Q3 (.C(C), 
+                                        .CE(OR_CE_L), 
+                                        .CLR(CLR), 
+                                        .D(D[3]), 
+                                        .L(L), 
+                                        .T(T3), 
+                                        .Q(Q_DUMMY[3]));
+   (* HU_SET = "I_Q4_24" *) 
+   FTCLEX_MXILINX_indianpoker_top #( .INIT(1'b0) ) I_Q4 (.C(C), 
+                                        .CE(OR_CE_L), 
+                                        .CLR(CLR), 
+                                        .D(D[4]), 
+                                        .L(L), 
+                                        .T(T4), 
+                                        .Q(Q_DUMMY[4]));
+   (* HU_SET = "I_Q5_23" *) 
+   FTCLEX_MXILINX_indianpoker_top #( .INIT(1'b0) ) I_Q5 (.C(C), 
+                                        .CE(OR_CE_L), 
+                                        .CLR(CLR), 
+                                        .D(D[5]), 
+                                        .L(L), 
+                                        .T(T5), 
+                                        .Q(Q_DUMMY[5]));
+   (* HU_SET = "I_Q6_22" *) 
+   FTCLEX_MXILINX_indianpoker_top #( .INIT(1'b0) ) I_Q6 (.C(C), 
+                                        .CE(OR_CE_L), 
+                                        .CLR(CLR), 
+                                        .D(D[6]), 
+                                        .L(L), 
+                                        .T(T6), 
+                                        .Q(Q_DUMMY[6]));
+   (* HU_SET = "I_Q7_21" *) 
+   FTCLEX_MXILINX_indianpoker_top #( .INIT(1'b0) ) I_Q7 (.C(C), 
+                                        .CE(OR_CE_L), 
+                                        .CLR(CLR), 
+                                        .D(D[7]), 
+                                        .L(L), 
+                                        .T(T7), 
+                                        .Q(Q_DUMMY[7]));
+   (* HU_SET = "I_TC_33" *) 
+   M2_1_MXILINX_indianpoker_top  I_TC (.D0(TC_DN), 
+                                      .D1(TC_UP), 
+                                      .S0(UP), 
+                                      .O(TC_DUMMY));
+   (* HU_SET = "I_T1_36" *) 
+   M2_1B1_MXILINX_indianpoker_top  I_T1 (.D0(Q_DUMMY[0]), 
+                                        .D1(Q_DUMMY[0]), 
+                                        .S0(UP), 
+                                        .O(T1));
+   (* HU_SET = "I_T2_29" *) 
+   M2_1_MXILINX_indianpoker_top  I_T2 (.D0(T2_DN), 
+                                      .D1(T2_UP), 
+                                      .S0(UP), 
+                                      .O(T2));
+   (* HU_SET = "I_T3_30" *) 
+   M2_1_MXILINX_indianpoker_top  I_T3 (.D0(T3_DN), 
+                                      .D1(T3_UP), 
+                                      .S0(UP), 
+                                      .O(T3));
+   (* HU_SET = "I_T4_35" *) 
+   M2_1_MXILINX_indianpoker_top  I_T4 (.D0(T4_DN), 
+                                      .D1(T4_UP), 
+                                      .S0(UP), 
+                                      .O(T4));
+   (* HU_SET = "I_T5_34" *) 
+   M2_1_MXILINX_indianpoker_top  I_T5 (.D0(T5_DN), 
+                                      .D1(T5_UP), 
+                                      .S0(UP), 
+                                      .O(T5));
+   (* HU_SET = "I_T6_31" *) 
+   M2_1_MXILINX_indianpoker_top  I_T6 (.D0(T6_DN), 
+                                      .D1(T6_UP), 
+                                      .S0(UP), 
+                                      .O(T6));
+   (* HU_SET = "I_T7_32" *) 
+   M2_1_MXILINX_indianpoker_top  I_T7 (.D0(T7_DN), 
+                                      .D1(T7_UP), 
+                                      .S0(UP), 
+                                      .O(T7));
+   AND5  I_36_31 (.I0(Q_DUMMY[7]), 
+                 .I1(Q_DUMMY[6]), 
+                 .I2(Q_DUMMY[5]), 
+                 .I3(Q_DUMMY[4]), 
+                 .I4(T4), 
+                 .O(TC_UP));
+   AND4  I_36_33 (.I0(Q_DUMMY[6]), 
+                 .I1(Q_DUMMY[5]), 
+                 .I2(Q_DUMMY[4]), 
+                 .I3(T4), 
+                 .O(T7_UP));
+   AND4B3  I_36_34 (.I0(Q_DUMMY[6]), 
+                   .I1(Q_DUMMY[5]), 
+                   .I2(Q_DUMMY[4]), 
+                   .I3(T4), 
+                   .O(T7_DN));
+   AND2B2  I_36_36 (.I0(Q_DUMMY[1]), 
+                   .I1(Q_DUMMY[0]), 
+                   .O(T2_DN));
+   VCC  I_36_38 (.P(XLXN_1));
+   AND2B1  I_36_40 (.I0(Q_DUMMY[4]), 
+                   .I1(T4), 
+                   .O(T5_DN));
+   AND3  I_36_41 (.I0(Q_DUMMY[5]), 
+                 .I1(Q_DUMMY[4]), 
+                 .I2(T4), 
+                 .O(T6_UP));
+   AND3B2  I_36_42 (.I0(Q_DUMMY[5]), 
+                   .I1(Q_DUMMY[4]), 
+                   .I2(T4), 
+                   .O(T6_DN));
+   AND3B3  I_36_46 (.I0(Q_DUMMY[2]), 
+                   .I1(Q_DUMMY[1]), 
+                   .I2(Q_DUMMY[0]), 
+                   .O(T3_DN));
+   AND4B4  I_36_47 (.I0(Q_DUMMY[3]), 
+                   .I1(Q_DUMMY[2]), 
+                   .I2(Q_DUMMY[1]), 
+                   .I3(Q_DUMMY[0]), 
+                   .O(T4_DN));
+   AND4  I_36_48 (.I0(Q_DUMMY[3]), 
+                 .I1(Q_DUMMY[2]), 
+                 .I2(Q_DUMMY[1]), 
+                 .I3(Q_DUMMY[0]), 
+                 .O(T4_UP));
+   AND2  I_36_50 (.I0(Q_DUMMY[1]), 
+                 .I1(Q_DUMMY[0]), 
+                 .O(T2_UP));
+   AND3  I_36_51 (.I0(Q_DUMMY[2]), 
+                 .I1(Q_DUMMY[1]), 
+                 .I2(Q_DUMMY[0]), 
+                 .O(T3_UP));
+   AND2  I_36_52 (.I0(Q_DUMMY[4]), 
+                 .I1(T4), 
+                 .O(T5_UP));
+   AND5B4  I_36_55 (.I0(Q_DUMMY[7]), 
+                   .I1(Q_DUMMY[6]), 
+                   .I2(Q_DUMMY[5]), 
+                   .I3(Q_DUMMY[4]), 
+                   .I4(T4), 
+                   .O(TC_DN));
+   AND2  I_36_63 (.I0(CE), 
+                 .I1(TC_DUMMY), 
+                 .O(CEO));
+   OR2  I_36_74 (.I0(CE), 
+                .I1(L), 
+                .O(OR_CE_L));
+endmodule
+`timescale 1ns / 1ps
+
+module COMP8_MXILINX_indianpoker_top(A, 
+                                     B, 
+                                     EQ);
+
+    input [7:0] A;
+    input [7:0] B;
+   output EQ;
+   
+   wire AB0;
+   wire AB1;
+   wire AB2;
+   wire AB3;
+   wire AB4;
+   wire AB5;
+   wire AB6;
+   wire AB7;
+   wire AB03;
+   wire AB47;
+   
+   AND4  I_36_32 (.I0(AB7), 
+                 .I1(AB6), 
+                 .I2(AB5), 
+                 .I3(AB4), 
+                 .O(AB47));
+   XNOR2  I_36_33 (.I0(B[6]), 
+                  .I1(A[6]), 
+                  .O(AB6));
+   XNOR2  I_36_34 (.I0(B[7]), 
+                  .I1(A[7]), 
+                  .O(AB7));
+   XNOR2  I_36_35 (.I0(B[5]), 
+                  .I1(A[5]), 
+                  .O(AB5));
+   XNOR2  I_36_36 (.I0(B[4]), 
+                  .I1(A[4]), 
+                  .O(AB4));
+   AND4  I_36_41 (.I0(AB3), 
+                 .I1(AB2), 
+                 .I2(AB1), 
+                 .I3(AB0), 
+                 .O(AB03));
+   XNOR2  I_36_42 (.I0(B[2]), 
+                  .I1(A[2]), 
+                  .O(AB2));
+   XNOR2  I_36_43 (.I0(B[3]), 
+                  .I1(A[3]), 
+                  .O(AB3));
+   XNOR2  I_36_44 (.I0(B[1]), 
+                  .I1(A[1]), 
+                  .O(AB1));
+   XNOR2  I_36_45 (.I0(B[0]), 
+                  .I1(A[0]), 
+                  .O(AB0));
+   AND2  I_36_50 (.I0(AB47), 
+                 .I1(AB03), 
+                 .O(EQ));
+endmodule
+`timescale 1ns / 1ps
+
+module Updown_design_MUSER_indianpoker_top(CLK, 
+                                           CLR, 
+                                           Down, 
+                                           EN, 
+                                           L, 
+                                           Max, 
+                                           min, 
+                                           Up, 
+                                           Q);
+
+    input CLK;
+    input CLR;
+    input Down;
+    input EN;
+    input L;
+    input [7:0] Max;
+    input [7:0] min;
+    input Up;
+   output [7:0] Q;
+   
+   wire [7:0] D;
+   wire XLXN_18;
+   wire XLXN_48;
+   wire XLXN_49;
+   wire XLXN_57;
+   wire XLXN_58;
+   wire XLXN_67;
+   wire XLXN_69;
+   wire XLXN_70;
+   wire XLXN_71;
+   wire [7:0] Q_DUMMY;
+   
+   assign Q[7:0] = Q_DUMMY[7:0];
+   (* HU_SET = "XLXI_1_39" *) 
+   CB8CLED_MXILINX_indianpoker_top  XLXI_1 (.C(CLK), 
+                                           .CE(XLXN_58), 
+                                           .CLR(CLR), 
+                                           .D(D[7:0]), 
+                                           .L(XLXN_18), 
+                                           .UP(XLXN_49), 
+                                           .CEO(), 
+                                           .Q(Q_DUMMY[7:0]), 
+                                           .TC());
+   (* HU_SET = "XLXI_3_37" *) 
+   COMP8_MXILINX_indianpoker_top  XLXI_3 (.A(Q_DUMMY[7:0]), 
+                                         .B(Max[7:0]), 
+                                         .EQ(XLXN_71));
+   (* HU_SET = "XLXI_4_38" *) 
+   COMP8_MXILINX_indianpoker_top  XLXI_4 (.A(Q_DUMMY[7:0]), 
+                                         .B(min[7:0]), 
+                                         .EQ(XLXN_70));
+   AND2  XLXI_20 (.I0(L), 
+                 .I1(XLXN_48), 
+                 .O(XLXN_18));
+   VCC  XLXI_21 (.P(XLXN_48));
+   VCC  XLXI_23 (.P(D[0]));
+   GND  XLXI_24 (.G(D[1]));
+   GND  XLXI_25 (.G(D[2]));
+   GND  XLXI_26 (.G(D[3]));
+   GND  XLXI_27 (.G(D[4]));
+   GND  XLXI_28 (.G(D[5]));
+   GND  XLXI_29 (.G(D[6]));
+   GND  XLXI_30 (.G(D[7]));
+   INV  XLXI_31 (.I(Down), 
+                .O(XLXN_49));
+   AND2  XLXI_34 (.I0(EN), 
+                 .I1(XLXN_57), 
+                 .O(XLXN_58));
+   OR2  XLXI_36 (.I0(XLXN_69), 
+                .I1(XLXN_67), 
+                .O(XLXN_57));
+   AND2B1  XLXI_37 (.I0(XLXN_71), 
+                   .I1(Up), 
+                   .O(XLXN_67));
+   AND2B1  XLXI_38 (.I0(XLXN_70), 
+                   .I1(Down), 
+                   .O(XLXN_69));
+endmodule
+`timescale 1ns / 1ps
+
+module CB4CLE_MXILINX_indianpoker_top(C, 
+                                      CE, 
+                                      CLR, 
+                                      D0, 
+                                      D1, 
+                                      D2, 
+                                      D3, 
+                                      L, 
+                                      CEO, 
+                                      Q0, 
+                                      Q1, 
+                                      Q2, 
+                                      Q3, 
+                                      TC);
+
+    input C;
+    input CE;
+    input CLR;
+    input D0;
+    input D1;
+    input D2;
+    input D3;
+    input L;
+   output CEO;
+   output Q0;
+   output Q1;
+   output Q2;
+   output Q3;
+   output TC;
+   
+   wire OR_CE_L;
+   wire T2;
+   wire T3;
+   wire XLXN_1;
+   wire Q0_DUMMY;
+   wire Q1_DUMMY;
+   wire Q2_DUMMY;
+   wire Q3_DUMMY;
+   wire TC_DUMMY;
+   
+   assign Q0 = Q0_DUMMY;
+   assign Q1 = Q1_DUMMY;
+   assign Q2 = Q2_DUMMY;
+   assign Q3 = Q3_DUMMY;
+   assign TC = TC_DUMMY;
+   (* HU_SET = "I_Q0_40" *) 
+   FTCLEX_MXILINX_indianpoker_top #( .INIT(1'b0) ) I_Q0 (.C(C), 
+                                        .CE(OR_CE_L), 
+                                        .CLR(CLR), 
+                                        .D(D0), 
+                                        .L(L), 
+                                        .T(XLXN_1), 
+                                        .Q(Q0_DUMMY));
+   (* HU_SET = "I_Q1_41" *) 
+   FTCLEX_MXILINX_indianpoker_top #( .INIT(1'b0) ) I_Q1 (.C(C), 
+                                        .CE(OR_CE_L), 
+                                        .CLR(CLR), 
+                                        .D(D1), 
+                                        .L(L), 
+                                        .T(Q0_DUMMY), 
+                                        .Q(Q1_DUMMY));
+   (* HU_SET = "I_Q2_42" *) 
+   FTCLEX_MXILINX_indianpoker_top #( .INIT(1'b0) ) I_Q2 (.C(C), 
+                                        .CE(OR_CE_L), 
+                                        .CLR(CLR), 
+                                        .D(D2), 
+                                        .L(L), 
+                                        .T(T2), 
+                                        .Q(Q2_DUMMY));
+   (* HU_SET = "I_Q3_43" *) 
+   FTCLEX_MXILINX_indianpoker_top #( .INIT(1'b0) ) I_Q3 (.C(C), 
+                                        .CE(OR_CE_L), 
+                                        .CLR(CLR), 
+                                        .D(D3), 
+                                        .L(L), 
+                                        .T(T3), 
+                                        .Q(Q3_DUMMY));
+   VCC  I_36_59 (.P(XLXN_1));
+   AND4  I_36_87 (.I0(Q0_DUMMY), 
+                 .I1(Q1_DUMMY), 
+                 .I2(Q2_DUMMY), 
+                 .I3(Q3_DUMMY), 
+                 .O(TC_DUMMY));
+   AND2  I_36_98 (.I0(Q1_DUMMY), 
+                 .I1(Q0_DUMMY), 
+                 .O(T2));
+   AND3  I_36_99 (.I0(Q2_DUMMY), 
+                 .I1(Q1_DUMMY), 
+                 .I2(Q0_DUMMY), 
+                 .O(T3));
+   AND2  I_36_107 (.I0(CE), 
+                  .I1(TC_DUMMY), 
+                  .O(CEO));
+   OR2  I_36_120 (.I0(CE), 
+                 .I1(L), 
+                 .O(OR_CE_L));
+endmodule
+`timescale 1ns / 1ps
+
+module COMPM8_MXILINX_indianpoker_top(A, 
+                                      B, 
+                                      GT, 
+                                      LT);
+
+    input [7:0] A;
+    input [7:0] B;
+   output GT;
+   output LT;
+   
+   wire EQ_1;
+   wire EQ_3;
+   wire EQ_5;
+   wire EQ_7;
+   wire EQ2_3;
+   wire EQ4_5;
+   wire EQ6_7;
+   wire GE0_1;
+   wire GE2_3;
+   wire GE4_5;
+   wire GE6_7;
+   wire GTA;
+   wire GTB;
+   wire GTC;
+   wire GTD;
+   wire GT_1;
+   wire GT_3;
+   wire GT_5;
+   wire GT_7;
+   wire GT0_1;
+   wire GT2_3;
+   wire GT4_5;
+   wire LE0_1;
+   wire LE2_3;
+   wire LE4_5;
+   wire LE6_7;
+   wire LTA;
+   wire LTB;
+   wire LTC;
+   wire LTD;
+   wire LT_1;
+   wire LT_3;
+   wire LT_5;
+   wire LT_7;
+   wire LT0_1;
+   wire LT2_3;
+   wire LT4_5;
+   
+   AND2B1  I_36_1 (.I0(A[7]), 
+                  .I1(B[7]), 
+                  .O(LT_7));
+   OR4  I_36_3 (.I0(LTD), 
+               .I1(LTC), 
+               .I2(LTB), 
+               .I3(LTA), 
+               .O(LT));
+   NOR2  I_36_4 (.I0(GT4_5), 
+                .I1(LT4_5), 
+                .O(EQ4_5));
+   AND3  I_36_5 (.I0(EQ6_7), 
+                .I1(EQ4_5), 
+                .I2(LT2_3), 
+                .O(LTB));
+   OR2  I_36_6 (.I0(LT_3), 
+               .I1(LE2_3), 
+               .O(LT2_3));
+   OR2  I_36_7 (.I0(GT_3), 
+               .I1(GE2_3), 
+               .O(GT2_3));
+   OR2  I_36_8 (.I0(GT_1), 
+               .I1(GE0_1), 
+               .O(GT0_1));
+   AND3B1  I_36_9 (.I0(A[0]), 
+                  .I1(EQ_1), 
+                  .I2(B[0]), 
+                  .O(LE0_1));
+   AND3B1  I_36_10 (.I0(B[0]), 
+                   .I1(EQ_1), 
+                   .I2(A[0]), 
+                   .O(GE0_1));
+   AND3B1  I_36_11 (.I0(A[2]), 
+                   .I1(EQ_3), 
+                   .I2(B[2]), 
+                   .O(LE2_3));
+   AND3B1  I_36_12 (.I0(B[2]), 
+                   .I1(EQ_3), 
+                   .I2(A[2]), 
+                   .O(GE2_3));
+   XNOR2  I_36_13 (.I0(A[1]), 
+                  .I1(B[1]), 
+                  .O(EQ_1));
+   AND2B1  I_36_14 (.I0(B[1]), 
+                   .I1(A[1]), 
+                   .O(GT_1));
+   XNOR2  I_36_15 (.I0(A[3]), 
+                  .I1(B[3]), 
+                  .O(EQ_3));
+   AND2B1  I_36_16 (.I0(A[1]), 
+                   .I1(B[1]), 
+                   .O(LT_1));
+   AND2B1  I_36_17 (.I0(B[3]), 
+                   .I1(A[3]), 
+                   .O(GT_3));
+   OR2  I_36_18 (.I0(LT_1), 
+                .I1(LE0_1), 
+                .O(LT0_1));
+   AND2B1  I_36_19 (.I0(A[3]), 
+                   .I1(B[3]), 
+                   .O(LT_3));
+   AND2  I_36_20 (.I0(GT4_5), 
+                 .I1(EQ6_7), 
+                 .O(GTC));
+   AND2  I_36_21 (.I0(EQ6_7), 
+                 .I1(LT4_5), 
+                 .O(LTC));
+   NOR2  I_36_22 (.I0(GTD), 
+                 .I1(LTD), 
+                 .O(EQ6_7));
+   OR2  I_36_23 (.I0(LT_5), 
+                .I1(LE4_5), 
+                .O(LT4_5));
+   AND2B1  I_36_24 (.I0(B[7]), 
+                   .I1(A[7]), 
+                   .O(GT_7));
+   AND2B1  I_36_25 (.I0(A[5]), 
+                   .I1(B[5]), 
+                   .O(LT_5));
+   XNOR2  I_36_26 (.I0(A[7]), 
+                  .I1(B[7]), 
+                  .O(EQ_7));
+   AND2B1  I_36_27 (.I0(B[5]), 
+                   .I1(A[5]), 
+                   .O(GT_5));
+   XNOR2  I_36_28 (.I0(A[5]), 
+                  .I1(B[5]), 
+                  .O(EQ_5));
+   AND3B1  I_36_29 (.I0(B[6]), 
+                   .I1(EQ_7), 
+                   .I2(A[6]), 
+                   .O(GE6_7));
+   AND3B1  I_36_30 (.I0(A[6]), 
+                   .I1(EQ_7), 
+                   .I2(B[6]), 
+                   .O(LE6_7));
+   AND3B1  I_36_31 (.I0(B[4]), 
+                   .I1(EQ_5), 
+                   .I2(A[4]), 
+                   .O(GE4_5));
+   AND3B1  I_36_32 (.I0(A[4]), 
+                   .I1(EQ_5), 
+                   .I2(B[4]), 
+                   .O(LE4_5));
+   OR2  I_36_33 (.I0(GT_5), 
+                .I1(GE4_5), 
+                .O(GT4_5));
+   OR2  I_36_34 (.I0(GT_7), 
+                .I1(GE6_7), 
+                .O(GTD));
+   OR2  I_36_35 (.I0(LT_7), 
+                .I1(LE6_7), 
+                .O(LTD));
+   AND4  I_36_36 (.I0(EQ6_7), 
+                 .I1(EQ4_5), 
+                 .I2(EQ2_3), 
+                 .I3(LT0_1), 
+                 .O(LTA));
+   AND4  I_36_37 (.I0(GT0_1), 
+                 .I1(EQ2_3), 
+                 .I2(EQ4_5), 
+                 .I3(EQ6_7), 
+                 .O(GTA));
+   AND3  I_36_38 (.I0(GT2_3), 
+                 .I1(EQ4_5), 
+                 .I2(EQ6_7), 
+                 .O(GTB));
+   NOR2  I_36_39 (.I0(GT2_3), 
+                 .I1(LT2_3), 
+                 .O(EQ2_3));
+   OR4  I_36_40 (.I0(GTD), 
+                .I1(GTC), 
+                .I2(GTB), 
+                .I3(GTA), 
+                .O(GT));
+endmodule
+`timescale 1ns / 1ps
+
+module Updown_top_MUSER_indianpoker_top(aa, 
+                                        bb, 
+                                        CLK, 
+                                        CLR, 
+                                        c1, 
+                                        c2, 
+                                        set, 
+                                        t, 
+                                        a, 
+                                        alpha, 
+                                        b, 
+                                        beta, 
+                                        EN, 
+                                        Q0, 
+                                        Q1, 
+                                        z);
+
+    input aa;
+    input bb;
+    input CLK;
+    input CLR;
+    input c1;
+    input c2;
+    input set;
+    input t;
+   output a;
+   output alpha;
+   output b;
+   output beta;
+   output EN;
+   output Q0;
+   output Q1;
+   output z;
+   
+   wire XLXN_1;
+   wire XLXN_10;
+   wire XLXN_11;
+   wire XLXN_12;
+   wire XLXN_13;
+   wire XLXN_14;
+   wire XLXN_15;
+   wire XLXN_16;
+   wire XLXN_19;
+   wire XLXN_20;
+   wire XLXN_21;
+   wire XLXN_22;
+   wire XLXN_23;
+   wire XLXN_24;
+   wire XLXN_76;
+   wire XLXN_86;
+   wire XLXN_97;
+   wire XLXN_102;
+   wire XLXN_103;
+   wire XLXN_265;
+   wire XLXN_266;
+   wire XLXN_268;
+   wire XLXN_269;
+   wire XLXN_345;
+   wire beta_DUMMY;
+   wire alpha_DUMMY;
+   wire Q0_DUMMY;
+   wire Q1_DUMMY;
+   wire EN_DUMMY;
+   wire a_DUMMY;
+   wire b_DUMMY;
+   
+   assign a = a_DUMMY;
+   assign alpha = alpha_DUMMY;
+   assign b = b_DUMMY;
+   assign beta = beta_DUMMY;
+   assign EN = EN_DUMMY;
+   assign Q0 = Q0_DUMMY;
+   assign Q1 = Q1_DUMMY;
+   FDC #( .INIT(1'b0) ) XLXI_22 (.C(CLK), 
+                .CLR(CLR), 
+                .D(XLXN_1), 
+                .Q(Q1_DUMMY));
+   FDC #( .INIT(1'b0) ) XLXI_24 (.C(XLXN_266), 
+                .CLR(CLR), 
+                .D(XLXN_345), 
+                .Q(beta_DUMMY));
+   FDC #( .INIT(1'b0) ) XLXI_25 (.C(XLXN_266), 
+                .CLR(CLR), 
+                .D(XLXN_265), 
+                .Q(alpha_DUMMY));
+   FDC #( .INIT(1'b0) ) XLXI_26 (.C(XLXN_266), 
+                .CLR(CLR), 
+                .D(Q1_DUMMY), 
+                .Q(b_DUMMY));
+   FDC #( .INIT(1'b0) ) XLXI_27 (.C(XLXN_266), 
+                .CLR(CLR), 
+                .D(Q0_DUMMY), 
+                .Q(a_DUMMY));
+   OR5  XLXI_72 (.I0(XLXN_12), 
+                .I1(XLXN_11), 
+                .I2(XLXN_10), 
+                .I3(XLXN_13), 
+                .I4(XLXN_14), 
+                .O(XLXN_1));
+   AND5B3  XLXI_87 (.I0(beta_DUMMY), 
+                   .I1(Q0_DUMMY), 
+                   .I2(Q1_DUMMY), 
+                   .I3(t), 
+                   .I4(XLXN_15), 
+                   .O(XLXN_14));
+   AND3B1  XLXI_88 (.I0(Q1_DUMMY), 
+                   .I1(set), 
+                   .I2(Q0_DUMMY), 
+                   .O(XLXN_13));
+   AND3B1  XLXI_89 (.I0(t), 
+                   .I1(Q0_DUMMY), 
+                   .I2(Q1_DUMMY), 
+                   .O(XLXN_12));
+   AND3B2  XLXI_90 (.I0(set), 
+                   .I1(Q0_DUMMY), 
+                   .I2(Q1_DUMMY), 
+                   .O(XLXN_10));
+   AND4B2  XLXI_91 (.I0(c2), 
+                   .I1(Q0_DUMMY), 
+                   .I2(set), 
+                   .I3(Q1_DUMMY), 
+                   .O(XLXN_11));
+   OR3  XLXI_120 (.I0(XLXN_16), 
+                 .I1(bb), 
+                 .I2(alpha_DUMMY), 
+                 .O(XLXN_15));
+   AND2B1  XLXI_121 (.I0(aa), 
+                    .I1(b_DUMMY), 
+                    .O(XLXN_16));
+   FDC #( .INIT(1'b0) ) XLXI_124 (.C(CLK), 
+                 .CLR(CLR), 
+                 .D(XLXN_19), 
+                 .Q(Q0_DUMMY));
+   OR5  XLXI_125 (.I0(XLXN_22), 
+                 .I1(XLXN_21), 
+                 .I2(XLXN_20), 
+                 .I3(XLXN_23), 
+                 .I4(XLXN_24), 
+                 .O(XLXN_19));
+   AND4B2  XLXI_128 (.I0(c1), 
+                    .I1(Q1_DUMMY), 
+                    .I2(set), 
+                    .I3(Q0_DUMMY), 
+                    .O(XLXN_20));
+   AND3B1  XLXI_129 (.I0(t), 
+                    .I1(Q0_DUMMY), 
+                    .I2(Q1_DUMMY), 
+                    .O(XLXN_22));
+   OR3  XLXI_131 (.I0(aa), 
+                 .I1(beta_DUMMY), 
+                 .I2(XLXN_103), 
+                 .O(XLXN_86));
+   AND2B1  XLXI_132 (.I0(bb), 
+                    .I1(a_DUMMY), 
+                    .O(XLXN_103));
+   OR2  XLXI_194 (.I0(XLXN_97), 
+                 .I1(XLXN_102), 
+                 .O(XLXN_76));
+   AND2B1  XLXI_195 (.I0(alpha_DUMMY), 
+                    .I1(XLXN_86), 
+                    .O(XLXN_102));
+   AND2B2  XLXI_198 (.I0(a_DUMMY), 
+                    .I1(b_DUMMY), 
+                    .O(XLXN_97));
+   AND2  XLXI_357 (.I0(CLK), 
+                  .I1(EN_DUMMY), 
+                  .O(XLXN_266));
+   AND4B2  XLXI_373 (.I0(Q0_DUMMY), 
+                    .I1(Q1_DUMMY), 
+                    .I2(t), 
+                    .I3(XLXN_76), 
+                    .O(XLXN_24));
+   AND3B1  XLXI_375 (.I0(Q0_DUMMY), 
+                    .I1(set), 
+                    .I2(Q1_DUMMY), 
+                    .O(XLXN_21));
+   OR2  XLXI_380 (.I0(XLXN_269), 
+                 .I1(XLXN_268), 
+                 .O(EN_DUMMY));
+   AND4B2  XLXI_381 (.I0(c1), 
+                    .I1(Q1_DUMMY), 
+                    .I2(set), 
+                    .I3(Q0_DUMMY), 
+                    .O(XLXN_268));
+   AND4B2  XLXI_382 (.I0(c2), 
+                    .I1(Q0_DUMMY), 
+                    .I2(set), 
+                    .I3(Q1_DUMMY), 
+                    .O(XLXN_269));
+   AND3B2  XLXI_388 (.I0(Q1_DUMMY), 
+                    .I1(set), 
+                    .I2(Q0_DUMMY), 
+                    .O(XLXN_23));
+   XNOR2  XLXI_389 (.I0(Q0_DUMMY), 
+                   .I1(Q1_DUMMY), 
+                   .O(z));
+   AND3B1  XLXI_393 (.I0(Q0_DUMMY), 
+                    .I1(c1), 
+                    .I2(Q1_DUMMY), 
+                    .O(XLXN_345));
+   AND3B1  XLXI_394 (.I0(Q1_DUMMY), 
+                    .I1(Q0_DUMMY), 
+                    .I2(c2), 
+                    .O(XLXN_265));
+endmodule
+`timescale 1ns / 1ps
+
+module updown_top_top_MUSER_indianpoker_top(aa, 
+                                            bb, 
+                                            CLK, 
+                                            CLR, 
+                                            Down, 
+                                            Max, 
+                                            min1, 
+                                            min2, 
+                                            set, 
+                                            Up, 
+                                            a, 
+                                            alpha, 
+                                            b, 
+                                            beta, 
+                                            EN, 
+                                            Q0, 
+                                            Q1, 
+                                            v1, 
+                                            v2);
+
+    input aa;
+    input bb;
+    input CLK;
+    input CLR;
+    input Down;
+    input [7:0] Max;
+    input [7:0] min1;
+    input [7:0] min2;
+    input set;
+    input Up;
+   output a;
+   output alpha;
+   output b;
+   output beta;
+   output EN;
+   output Q0;
+   output Q1;
+   output [7:0] v1;
+   output [7:0] v2;
+   
+   wire t0;
+   wire t2;
+   wire XLXN_9;
+   wire XLXN_10;
+   wire XLXN_11;
+   wire XLXN_12;
+   wire XLXN_63;
+   wire XLXN_64;
+   wire XLXN_65;
+   wire XLXN_66;
+   wire XLXN_80;
+   wire XLXN_81;
+   wire XLXN_110;
+   wire XLXN_137;
+   wire XLXN_138;
+   wire XLXN_139;
+   wire beta_DUMMY;
+   wire alpha_DUMMY;
+   wire Q0_DUMMY;
+   wire Q1_DUMMY;
+   wire a_DUMMY;
+   wire b_DUMMY;
+   wire [7:0] v1_DUMMY;
+   wire [7:0] v2_DUMMY;
+   
+   assign a = a_DUMMY;
+   assign alpha = alpha_DUMMY;
+   assign b = b_DUMMY;
+   assign beta = beta_DUMMY;
+   assign Q0 = Q0_DUMMY;
+   assign Q1 = Q1_DUMMY;
+   assign v1[7:0] = v1_DUMMY[7:0];
+   assign v2[7:0] = v2_DUMMY[7:0];
+   Updown_top_MUSER_indianpoker_top  XLXI_1 (.aa(aa), 
+                                            .bb(bb), 
+                                            .CLK(CLK), 
+                                            .CLR(CLR), 
+                                            .c1(XLXN_11), 
+                                            .c2(XLXN_12), 
+                                            .set(set), 
+                                            .t(XLXN_81), 
+                                            .a(a_DUMMY), 
+                                            .alpha(alpha_DUMMY), 
+                                            .b(b_DUMMY), 
+                                            .beta(beta_DUMMY), 
+                                            .EN(EN), 
+                                            .Q0(Q0_DUMMY), 
+                                            .Q1(Q1_DUMMY), 
+                                            .z(XLXN_80));
+   Updown_design_MUSER_indianpoker_top  XLXI_2 (.CLK(CLK), 
+                                               .CLR(CLR), 
+                                               .Down(Down), 
+                                               .EN(XLXN_9), 
+                                               .L(XLXN_110), 
+                                               .Max(Max[7:0]), 
+                                               .min(min1[7:0]), 
+                                               .Up(Up), 
+                                               .Q(v1_DUMMY[7:0]));
+   Updown_design_MUSER_indianpoker_top  XLXI_3 (.CLK(CLK), 
+                                               .CLR(CLR), 
+                                               .Down(Down), 
+                                               .EN(XLXN_10), 
+                                               .L(XLXN_110), 
+                                               .Max(Max[7:0]), 
+                                               .min(min2[7:0]), 
+                                               .Up(Up), 
+                                               .Q(v2_DUMMY[7:0]));
+   (* HU_SET = "XLXI_5_44" *) 
+   COMPM8_MXILINX_indianpoker_top  XLXI_5 (.A(v1_DUMMY[7:0]), 
+                                          .B(v2_DUMMY[7:0]), 
+                                          .GT(XLXN_11), 
+                                          .LT(XLXN_12));
+   AND2B1  XLXI_7 (.I0(Q1_DUMMY), 
+                  .I1(Q0_DUMMY), 
+                  .O(XLXN_9));
+   AND2B1  XLXI_8 (.I0(Q0_DUMMY), 
+                  .I1(Q1_DUMMY), 
+                  .O(XLXN_10));
+   (* HU_SET = "XLXI_60_45" *) 
+   CB4CLE_MXILINX_indianpoker_top  XLXI_60 (.C(CLK), 
+                                           .CE(XLXN_80), 
+                                           .CLR(CLR), 
+                                           .D0(XLXN_63), 
+                                           .D1(XLXN_64), 
+                                           .D2(XLXN_65), 
+                                           .D3(XLXN_66), 
+                                           .L(XLXN_81), 
+                                           .CEO(), 
+                                           .Q0(t0), 
+                                           .Q1(), 
+                                           .Q2(t2), 
+                                           .Q3(), 
+                                           .TC());
+   GND  XLXI_62 (.G(XLXN_64));
+   GND  XLXI_63 (.G(XLXN_65));
+   GND  XLXI_64 (.G(XLXN_66));
+   AND2  XLXI_198 (.I0(t2), 
+                  .I1(t0), 
+                  .O(XLXN_81));
+   VCC  XLXI_204 (.P(XLXN_63));
+   AND2  XLXI_217 (.I0(XLXN_81), 
+                  .I1(XLXN_139), 
+                  .O(XLXN_110));
+   OR4  XLXI_218 (.I0(aa), 
+                 .I1(bb), 
+                 .I2(alpha_DUMMY), 
+                 .I3(beta_DUMMY), 
+                 .O(XLXN_137));
+   AND2B2  XLXI_221 (.I0(b_DUMMY), 
+                    .I1(a_DUMMY), 
+                    .O(XLXN_138));
+   OR2  XLXI_223 (.I0(XLXN_137), 
+                 .I1(XLXN_138), 
+                 .O(XLXN_139));
+endmodule
+`timescale 1ns / 1ps
+
+module indianpoker_top(CLK, 
+                       CLR, 
+                       Down, 
+                       Max, 
+                       min1, 
+                       min2, 
+                       set, 
+                       Up, 
+                       a, 
+                       b, 
+                       c1, 
+                       c2, 
+                       Q0, 
+                       Q1, 
+                       temp1, 
+                       temp2, 
+                       v1, 
+                       v2);
+
+    input CLK;
+    input CLR;
+    input Down;
+    input [7:0] Max;
+    input [7:0] min1;
+    input [7:0] min2;
+    input set;
+    input Up;
+   output [7:0] a;
+   output [7:0] b;
+   output [7:0] c1;
+   output [7:0] c2;
+   output Q0;
+   output Q1;
+   output [7:0] temp1;
+   output [7:0] temp2;
+   output [7:0] v1;
+   output [7:0] v2;
+   
+   wire [7:0] d;
+   wire [7:0] e;
+   wire [7:0] ten;
+   wire XLXN_9;
+   wire XLXN_10;
+   wire XLXN_11;
+   wire XLXN_12;
+   wire XLXN_14;
+   wire XLXN_18;
+   wire XLXN_35;
+   wire XLXN_36;
+   wire XLXN_37;
+   wire XLXN_113;
+   wire XLXN_128;
+   wire XLXN_167;
+   wire XLXN_168;
+   wire XLXN_170;
+   wire XLXN_179;
+   wire XLXN_180;
+   wire XLXN_205;
+   wire XLXN_206;
+   wire XLXN_207;
+   wire XLXN_208;
+   wire XLXN_209;
+   wire XLXN_217;
+   wire XLXN_218;
+   wire XLXN_219;
+   wire XLXN_222;
+   wire XLXN_225;
+   wire XLXN_226;
+   wire XLXN_283;
+   wire XLXN_284;
+   wire XLXN_291;
+   wire XLXN_364;
+   wire XLXN_365;
+   wire XLXN_366;
+   wire XLXN_367;
+   wire XLXN_368;
+   wire [7:0] XLXN_369;
+   wire Q0_DUMMY;
+   wire Q1_DUMMY;
+   wire [7:0] a_DUMMY;
+   wire [7:0] b_DUMMY;
+   wire [7:0] temp1_DUMMY;
+   wire [7:0] v1_DUMMY;
+   wire [7:0] temp2_DUMMY;
+   wire [7:0] v2_DUMMY;
+   
+   assign a[7:0] = a_DUMMY[7:0];
+   assign b[7:0] = b_DUMMY[7:0];
+   assign Q0 = Q0_DUMMY;
+   assign Q1 = Q1_DUMMY;
+   assign temp1[7:0] = temp1_DUMMY[7:0];
+   assign temp2[7:0] = temp2_DUMMY[7:0];
+   assign v1[7:0] = v1_DUMMY[7:0];
+   assign v2[7:0] = v2_DUMMY[7:0];
+   updown_top_top_MUSER_indianpoker_top  XLXI_1 (.aa(XLXN_12), 
+                                                .bb(XLXN_11), 
+                                                .CLK(CLK), 
+                                                .CLR(CLR), 
+                                                .Down(Down), 
+                                                .Max(Max[7:0]), 
+                                                .min1(min1[7:0]), 
+                                                .min2(min2[7:0]), 
+                                                .set(set), 
+                                                .Up(Up), 
+                                                .a(), 
+                                                .alpha(XLXN_365), 
+                                                .b(), 
+                                                .beta(XLXN_364), 
+                                                .EN(XLXN_219), 
+                                                .Q0(Q0_DUMMY), 
+                                                .Q1(Q1_DUMMY), 
+                                                .v1(v1_DUMMY[7:0]), 
+                                                .v2(v2_DUMMY[7:0]));
+   random1_design_MUSER_indianpoker_top  XLXI_2 (.CLK(CLK), 
+                                                .CLR(CLR), 
+                                                .EN(XLXN_37), 
+                                                .r0(a_DUMMY[0]), 
+                                                .r1(a_DUMMY[1]), 
+                                                .r2(a_DUMMY[2]), 
+                                                .r3(a_DUMMY[3]));
+   random_design_MUSER_indianpoker_top  XLXI_3 (.CLK(CLK), 
+                                               .CLR(CLR), 
+                                               .EN(XLXN_37), 
+                                               .r0(b_DUMMY[0]), 
+                                               .r1(b_DUMMY[1]), 
+                                               .r2(b_DUMMY[2]), 
+                                               .r3(b_DUMMY[3]));
+   (* HU_SET = "XLXI_4_46" *) 
+   COMPM4_MXILINX_indianpoker_top  XLXI_4 (.A0(b_DUMMY[0]), 
+                                          .A1(b_DUMMY[1]), 
+                                          .A2(b_DUMMY[2]), 
+                                          .A3(b_DUMMY[3]), 
+                                          .B0(a_DUMMY[0]), 
+                                          .B1(a_DUMMY[1]), 
+                                          .B2(a_DUMMY[2]), 
+                                          .B3(a_DUMMY[3]), 
+                                          .GT(XLXN_9), 
+                                          .LT(XLXN_10));
+   FDCE #( .INIT(1'b0) ) XLXI_5 (.C(CLK), 
+                .CE(XLXN_14), 
+                .CLR(CLR), 
+                .D(XLXN_9), 
+                .Q(XLXN_11));
+   FDCE #( .INIT(1'b0) ) XLXI_6 (.C(CLK), 
+                .CE(XLXN_14), 
+                .CLR(CLR), 
+                .D(XLXN_10), 
+                .Q(XLXN_12));
+   XOR2  XLXI_7 (.I0(Q1_DUMMY), 
+                .I1(Q0_DUMMY), 
+                .O(XLXN_14));
+   AND2B1  XLXI_8 (.I0(XLXN_35), 
+                  .I1(XLXN_36), 
+                  .O(XLXN_37));
+   AND2B2  XLXI_9 (.I0(Q0_DUMMY), 
+                  .I1(Q1_DUMMY), 
+                  .O(XLXN_18));
+   FD #( .INIT(1'b0) ) XLXI_10 (.C(CLK), 
+               .D(XLXN_18), 
+               .Q(XLXN_36));
+   FD #( .INIT(1'b0) ) XLXI_11 (.C(CLK), 
+               .D(XLXN_36), 
+               .Q(XLXN_35));
+   (* HU_SET = "XLXI_13_47" *) 
+   FD8RE_MXILINX_indianpoker_top  XLXI_13 (.C(CLK), 
+                                          .CE(XLXN_222), 
+                                          .D(v1_DUMMY[7:0]), 
+                                          .R(), 
+                                          .Q(temp1_DUMMY[7:0]));
+   (* HU_SET = "XLXI_14_48" *) 
+   FD8RE_MXILINX_indianpoker_top  XLXI_14 (.C(CLK), 
+                                          .CE(XLXN_209), 
+                                          .D(v2_DUMMY[7:0]), 
+                                          .R(), 
+                                          .Q(temp2_DUMMY[7:0]));
+   (* HU_SET = "XLXI_16_50" *) 
+   ACC8_MXILINX_indianpoker_top  XLXI_16 (.ADD(XLXN_206), 
+                                         .B(ten[7:0]), 
+                                         .C(CLK), 
+                                         .CE(XLXN_170), 
+                                         .CI(XLXN_205), 
+                                         .D(d[7:0]), 
+                                         .L(CLR), 
+                                         .R(XLXN_180), 
+                                         .CO(), 
+                                         .OFL(), 
+                                         .Q(c1[7:0]));
+   (* HU_SET = "XLXI_17_49" *) 
+   ACC8_MXILINX_indianpoker_top  XLXI_17 (.ADD(XLXN_208), 
+                                         .B(ten[7:0]), 
+                                         .C(CLK), 
+                                         .CE(XLXN_170), 
+                                         .CI(XLXN_207), 
+                                         .D(e[7:0]), 
+                                         .L(CLR), 
+                                         .R(XLXN_179), 
+                                         .CO(), 
+                                         .OFL(), 
+                                         .Q(c2[7:0]));
+   GND  XLXI_18 (.G(d[7]));
+   GND  XLXI_19 (.G(d[6]));
+   GND  XLXI_20 (.G(d[0]));
+   GND  XLXI_21 (.G(d[5]));
+   VCC  XLXI_22 (.P(d[1]));
+   VCC  XLXI_24 (.P(d[2]));
+   VCC  XLXI_25 (.P(d[3]));
+   VCC  XLXI_26 (.P(d[4]));
+   VCC  XLXI_28 (.P(e[4]));
+   VCC  XLXI_29 (.P(e[3]));
+   VCC  XLXI_30 (.P(e[2]));
+   VCC  XLXI_31 (.P(e[1]));
+   GND  XLXI_32 (.G(e[0]));
+   GND  XLXI_33 (.G(e[5]));
+   GND  XLXI_34 (.G(e[6]));
+   GND  XLXI_35 (.G(e[7]));
+   OR2  XLXI_37 (.I0(XLXN_113), 
+                .I1(XLXN_364), 
+                .O(XLXN_206));
+   OR2  XLXI_38 (.I0(XLXN_128), 
+                .I1(XLXN_365), 
+                .O(XLXN_208));
+   AND2B1  XLXI_39 (.I0(XLXN_365), 
+                   .I1(XLXN_12), 
+                   .O(XLXN_113));
+   AND2B1  XLXI_44 (.I0(XLXN_364), 
+                   .I1(XLXN_11), 
+                   .O(XLXN_128));
+   FD #( .INIT(1'b0) ) XLXI_60 (.C(CLK), 
+               .D(XLXN_219), 
+               .Q(XLXN_168));
+   FD #( .INIT(1'b0) ) XLXI_61 (.C(CLK), 
+               .D(XLXN_168), 
+               .Q(XLXN_167));
+   AND2B1  XLXI_64 (.I0(XLXN_167), 
+                   .I1(XLXN_168), 
+                   .O(XLXN_170));
+   GND  XLXI_68 (.G(XLXN_179));
+   GND  XLXI_69 (.G(XLXN_180));
+   INV  XLXI_81 (.I(XLXN_206), 
+                .O(XLXN_205));
+   INV  XLXI_82 (.I(XLXN_208), 
+                .O(XLXN_207));
+   OR2  XLXI_84 (.I0(XLXN_218), 
+                .I1(XLXN_217), 
+                .O(XLXN_284));
+   AND2B1  XLXI_85 (.I0(XLXN_219), 
+                   .I1(set), 
+                   .O(XLXN_217));
+   AND3B1  XLXI_86 (.I0(XLXN_364), 
+                   .I1(XLXN_219), 
+                   .I2(set), 
+                   .O(XLXN_218));
+   OR2  XLXI_93 (.I0(XLXN_226), 
+                .I1(XLXN_225), 
+                .O(XLXN_283));
+   AND2B1  XLXI_94 (.I0(XLXN_219), 
+                   .I1(set), 
+                   .O(XLXN_225));
+   AND3B1  XLXI_95 (.I0(XLXN_365), 
+                   .I1(XLXN_219), 
+                   .I2(set), 
+                   .O(XLXN_226));
+   mux2_design_MUSER_indianpoker_top  XLXI_99 (.D0(temp1_DUMMY[7:0]), 
+                                              .D1(temp2_DUMMY[7:0]), 
+                                              .S(XLXN_364), 
+                                              .O(XLXN_369[7:0]));
+   mux2_design_MUSER_indianpoker_top  XLXI_100 (.D0(temp2_DUMMY[7:0]), 
+                                               .D1(temp1_DUMMY[7:0]), 
+                                               .S(XLXN_365), 
+                                               .O());
+   OR2  XLXI_120 (.I0(XLXN_283), 
+                 .I1(XLXN_291), 
+                 .O(XLXN_222));
+   OR2  XLXI_121 (.I0(XLXN_291), 
+                 .I1(XLXN_284), 
+                 .O(XLXN_209));
+   NOR2  XLXI_124 (.I0(Q1_DUMMY), 
+                  .I1(Q0_DUMMY), 
+                  .O(XLXN_291));
+   addten_design_MUSER_indianpoker_top  XLXI_191 (.b(XLXN_369[7:0]), 
+                                                 .s(XLXN_368), 
+                                                 .o(ten[7:0]));
+   AND5B2  XLXI_193 (.I0(a_DUMMY[0]), 
+                    .I1(a_DUMMY[2]), 
+                    .I2(a_DUMMY[1]), 
+                    .I3(a_DUMMY[3]), 
+                    .I4(XLXN_365), 
+                    .O(XLXN_366));
+   AND5B2  XLXI_194 (.I0(b_DUMMY[0]), 
+                    .I1(b_DUMMY[2]), 
+                    .I2(b_DUMMY[1]), 
+                    .I3(b_DUMMY[3]), 
+                    .I4(XLXN_364), 
+                    .O(XLXN_367));
+   OR2  XLXI_195 (.I0(XLXN_367), 
+                 .I1(XLXN_366), 
+                 .O(XLXN_368));
+   GND  XLXI_196 (.G(b_DUMMY[7]));
+   GND  XLXI_197 (.G(b_DUMMY[6]));
+   GND  XLXI_198 (.G(b_DUMMY[5]));
+   GND  XLXI_199 (.G(b_DUMMY[4]));
+   GND  XLXI_201 (.G(a_DUMMY[6]));
+   GND  XLXI_202 (.G(a_DUMMY[5]));
+   GND  XLXI_203 (.G(a_DUMMY[4]));
+   GND  XLXI_204 (.G(a_DUMMY[7]));
+endmodule

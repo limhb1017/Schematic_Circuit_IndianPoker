@@ -1,0 +1,3 @@
+MODULE segment_top
+	SUBMODULE segment_design
+		INSTANCE XLXI_1

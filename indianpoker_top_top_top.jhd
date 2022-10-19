@@ -1,0 +1,15 @@
+MODULE indianpoker_top_top_top
+	SUBMODULE indiapoker_top_top
+		INSTANCE XLXI_1
+	SUBMODULE mux2_design
+		INSTANCE XLXI_20
+	SUBMODULE mux2_design
+		INSTANCE XLXI_21
+	SUBMODULE mux2_design
+		INSTANCE XLXI_22
+	SUBMODULE mux2_design
+		INSTANCE XLXI_23
+	SUBMODULE mux2_design
+		INSTANCE XLXI_28
+	SUBMODULE mux2_design
+		INSTANCE XLXI_29

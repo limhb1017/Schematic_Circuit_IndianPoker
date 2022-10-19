@@ -1,0 +1,21 @@
+MODULE indianpoker_final3
+	SUBMODULE indianpoker_final
+		INSTANCE XLXI_1
+	SUBMODULE empty_design
+		INSTANCE XLXI_17
+	SUBMODULE empty_design
+		INSTANCE XLXI_2
+	SUBMODULE empty_design
+		INSTANCE XLXI_3
+	SUBMODULE empty_design
+		INSTANCE XLXI_7
+	SUBMODULE p_design
+		INSTANCE XLXI_19
+	SUBMODULE w_design
+		INSTANCE XLXI_20
+	SUBMODULE w_design
+		INSTANCE XLXI_21
+	SUBMODULE player1_design
+		INSTANCE XLXI_24
+	SUBMODULE player2_design
+		INSTANCE XLXI_25

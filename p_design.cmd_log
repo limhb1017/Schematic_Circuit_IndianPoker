@@ -1,0 +1,1 @@
+sch2sym -intstyle ise -family spartan3 -w -refsym p_design C:/Users/limhb/ISE/project_2_test/p_design.sch C:/Users/limhb/ISE/project_2_test/p_design.sym 

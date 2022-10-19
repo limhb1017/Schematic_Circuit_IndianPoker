@@ -1,0 +1,106 @@
+////////////////////////////////////////////////////////////////////////////////
+// Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+////////////////////////////////////////////////////////////////////////////////
+//   ____  ____ 
+//  /   /\/   / 
+// /___/  \  /    Vendor: Xilinx 
+// \   \   \/     Version : 14.7
+//  \   \         Application : sch2hdl
+//  /   /         Filename : player2_design.vf
+// /___/   /\     Timestamp : 01/26/2021 01:12:55
+// \   \  /  \ 
+//  \___\/\___\ 
+//
+//Command: sch2hdl -intstyle ise -family spartan3 -verilog C:/Users/limhb/ISE/project_2_test/player2_design.vf -w C:/Users/limhb/ISE/project_2_test/player2_design.sch
+//Design Name: player2_design
+//Device: spartan3
+//Purpose:
+//    This verilog netlist is translated from an ECS schematic.It can be 
+//    synthesized and simulated, but it should not be modified. 
+//
+`timescale 1ns / 1ps
+
+module M2_1_MXILINX_player2_design(D0, 
+                                   D1, 
+                                   S0, 
+                                   O);
+
+    input D0;
+    input D1;
+    input S0;
+   output O;
+   
+   wire M0;
+   wire M1;
+   
+   AND2B1  I_36_7 (.I0(S0), 
+                  .I1(D0), 
+                  .O(M0));
+   OR2  I_36_8 (.I0(M1), 
+               .I1(M0), 
+               .O(O));
+   AND2  I_36_9 (.I0(D1), 
+                .I1(S0), 
+                .O(M1));
+endmodule
+`timescale 1ns / 1ps
+
+module player2_design(a, 
+                      s, 
+                      o);
+
+    input [6:0] a;
+    input s;
+   output [6:0] o;
+   
+   wire XLXN_5;
+   wire XLXN_9;
+   wire XLXN_37;
+   wire XLXN_38;
+   wire XLXN_39;
+   wire XLXN_40;
+   wire XLXN_41;
+   
+   (* HU_SET = "XLXI_1_0" *) 
+   M2_1_MXILINX_player2_design  XLXI_1 (.D0(XLXN_40), 
+                                       .D1(a[5]), 
+                                       .S0(s), 
+                                       .O(o[5]));
+   (* HU_SET = "XLXI_2_1" *) 
+   M2_1_MXILINX_player2_design  XLXI_2 (.D0(XLXN_5), 
+                                       .D1(a[4]), 
+                                       .S0(s), 
+                                       .O(o[4]));
+   (* HU_SET = "XLXI_3_2" *) 
+   M2_1_MXILINX_player2_design  XLXI_3 (.D0(XLXN_39), 
+                                       .D1(a[3]), 
+                                       .S0(s), 
+                                       .O(o[3]));
+   (* HU_SET = "XLXI_4_3" *) 
+   M2_1_MXILINX_player2_design  XLXI_4 (.D0(XLXN_38), 
+                                       .D1(a[2]), 
+                                       .S0(s), 
+                                       .O(o[2]));
+   (* HU_SET = "XLXI_5_4" *) 
+   M2_1_MXILINX_player2_design  XLXI_5 (.D0(XLXN_9), 
+                                       .D1(a[1]), 
+                                       .S0(s), 
+                                       .O(o[1]));
+   (* HU_SET = "XLXI_6_5" *) 
+   M2_1_MXILINX_player2_design  XLXI_6 (.D0(XLXN_37), 
+                                       .D1(a[0]), 
+                                       .S0(s), 
+                                       .O(o[0]));
+   VCC  XLXI_7 (.P(XLXN_9));
+   VCC  XLXI_10 (.P(XLXN_5));
+   (* HU_SET = "XLXI_14_6" *) 
+   M2_1_MXILINX_player2_design  XLXI_14 (.D0(XLXN_41), 
+                                        .D1(a[6]), 
+                                        .S0(s), 
+                                        .O(o[6]));
+   GND  XLXI_32 (.G(XLXN_37));
+   GND  XLXI_34 (.G(XLXN_38));
+   GND  XLXI_35 (.G(XLXN_39));
+   GND  XLXI_36 (.G(XLXN_40));
+   GND  XLXI_37 (.G(XLXN_41));
+endmodule

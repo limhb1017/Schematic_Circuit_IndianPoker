@@ -1,0 +1,131 @@
+////////////////////////////////////////////////////////////////////////////////
+// Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+////////////////////////////////////////////////////////////////////////////////
+//   ____  ____ 
+//  /   /\/   / 
+// /___/  \  /    Vendor: Xilinx 
+// \   \   \/     Version : 14.7
+//  \   \         Application : sch2hdl
+//  /   /         Filename : segment_design.vf
+// /___/   /\     Timestamp : 01/25/2021 22:41:36
+// \   \  /  \ 
+//  \___\/\___\ 
+//
+//Command: sch2hdl -intstyle ise -family spartan3 -verilog C:/Users/limhb/ISE/project_2_test/segment_design.vf -w C:/Users/limhb/ISE/project_2_test/segment_design.sch
+//Design Name: segment_design
+//Device: spartan3
+//Purpose:
+//    This verilog netlist is translated from an ECS schematic.It can be 
+//    synthesized and simulated, but it should not be modified. 
+//
+`timescale 1ns / 1ps
+
+module segment_design(Q0, 
+                      Q1, 
+                      Q2, 
+                      Q3, 
+                      a, 
+                      b, 
+                      c, 
+                      d, 
+                      e, 
+                      f, 
+                      g);
+
+    input Q0;
+    input Q1;
+    input Q2;
+    input Q3;
+   output a;
+   output b;
+   output c;
+   output d;
+   output e;
+   output f;
+   output g;
+   
+   wire XLXN_1;
+   wire XLXN_10;
+   wire XLXN_23;
+   wire XLXN_24;
+   wire XLXN_25;
+   wire XLXN_39;
+   wire XLXN_40;
+   wire XLXN_41;
+   wire XLXN_51;
+   wire XLXN_57;
+   wire XLXN_58;
+   
+   AND3B2  XLXI_1 (.I0(Q3), 
+                  .I1(Q1), 
+                  .I2(XLXN_1), 
+                  .O(a));
+   XOR2  XLXI_2 (.I0(Q0), 
+                .I1(Q2), 
+                .O(XLXN_1));
+   XOR2  XLXI_3 (.I0(Q0), 
+                .I1(Q1), 
+                .O(XLXN_10));
+   AND3B1  XLXI_4 (.I0(Q3), 
+                  .I1(Q2), 
+                  .I2(XLXN_10), 
+                  .O(b));
+   AND4B3  XLXI_5 (.I0(Q0), 
+                  .I1(Q2), 
+                  .I2(Q3), 
+                  .I3(Q1), 
+                  .O(c));
+   AND4B3  XLXI_6 (.I0(Q1), 
+                  .I1(Q2), 
+                  .I2(Q3), 
+                  .I3(Q0), 
+                  .O(XLXN_23));
+   AND4B3  XLXI_7 (.I0(Q0), 
+                  .I1(Q1), 
+                  .I2(Q3), 
+                  .I3(Q2), 
+                  .O(XLXN_24));
+   AND4B1  XLXI_8 (.I0(Q3), 
+                  .I1(Q1), 
+                  .I2(Q2), 
+                  .I3(Q0), 
+                  .O(XLXN_25));
+   OR3  XLXI_9 (.I0(XLXN_25), 
+               .I1(XLXN_24), 
+               .I2(XLXN_23), 
+               .O(d));
+   OR3  XLXI_10 (.I0(XLXN_41), 
+                .I1(XLXN_40), 
+                .I2(XLXN_39), 
+                .O(e));
+   AND2B1  XLXI_11 (.I0(Q3), 
+                   .I1(Q0), 
+                   .O(XLXN_39));
+   AND3B2  XLXI_12 (.I0(Q1), 
+                   .I1(Q3), 
+                   .I2(Q2), 
+                   .O(XLXN_40));
+   AND3B2  XLXI_13 (.I0(Q1), 
+                   .I1(Q2), 
+                   .I2(Q0), 
+                   .O(XLXN_41));
+   OR2  XLXI_14 (.I0(Q0), 
+                .I1(Q1), 
+                .O(XLXN_51));
+   AND3B2  XLXI_15 (.I0(Q2), 
+                   .I1(Q3), 
+                   .I2(XLXN_51), 
+                   .O(f));
+   AND3B3  XLXI_17 (.I0(Q1), 
+                   .I1(Q2), 
+                   .I2(Q3), 
+                   .O(XLXN_57));
+   AND4B1  XLXI_18 (.I0(Q3), 
+                   .I1(Q0), 
+                   .I2(Q1), 
+                   .I3(Q2), 
+                   .O(XLXN_58));
+   OR2  XLXI_19 (.I0(XLXN_58), 
+                .I1(XLXN_57), 
+                .O(g));
+endmodule

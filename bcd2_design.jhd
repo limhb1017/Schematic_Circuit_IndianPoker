@@ -1,0 +1,3 @@
+MODULE bcd2_design
+	SUBMODULE bcd_design
+		INSTANCE XLXI_2
